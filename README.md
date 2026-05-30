@@ -20,7 +20,7 @@ A manuscript-style Quarto report analyzing co-occurring nutritional, reproductiv
 
 ## Live Report
 
-[moccaram.github.io/syndemic-bdhs2022](https://moccaram.github.io/syndemic-bdhs2022)
+[moccaram.github.io/syndemic-bdhs2022](https://moccaram.github.io/syndemic-bdhs2022) https://moccaram.github.io/syndemic-analysis/ 
 
 ## Repository Structure
 
