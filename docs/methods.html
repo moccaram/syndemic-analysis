@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Mukarram Hosain">
-<meta name="dcterms.date" content="2026-05-01">
 
-<title>Modeling the Syndemic Burden of Nutritional, Reproductive, and Healthcare-Access Risks Among Women in Bangladesh – Syndemic Burden Among Bangladeshi Women</title>
+<title>Methods – Syndemic Burden Among Bangladeshi Women</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -24,6 +22,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 /* CSS for citations */
 div.csl-bib-body { }
@@ -107,7 +140,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Overview</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./methods.html">Methods</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -141,13 +174,13 @@ div.csl-indent {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./methods.html" class="sidebar-item-text sidebar-link">
+  <a href="./methods.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Methods</span></a>
   </div>
 </li>
@@ -179,43 +212,27 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#abstract" id="toc-abstract" class="nav-link active" data-scroll-target="#abstract">Abstract</a></li>
-  <li><a href="#study-snapshot" id="toc-study-snapshot" class="nav-link" data-scroll-target="#study-snapshot">Study Snapshot</a></li>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a>
-  <ul class="collapse">
-  <li><a href="#study-aims" id="toc-study-aims" class="nav-link" data-scroll-target="#study-aims">Study Aims</a></li>
-  </ul></li>
-  <li><a href="#conceptual-framework" id="toc-conceptual-framework" class="nav-link" data-scroll-target="#conceptual-framework">Conceptual Framework</a></li>
+  <li><a href="#data-source-and-study-population" id="toc-data-source-and-study-population" class="nav-link active" data-scroll-target="#data-source-and-study-population">Data Source and Study Population</a></li>
+  <li><a href="#outcome-and-risk-domains" id="toc-outcome-and-risk-domains" class="nav-link" data-scroll-target="#outcome-and-risk-domains">Outcome and Risk Domains</a></li>
+  <li><a href="#covariates-and-model-parameters" id="toc-covariates-and-model-parameters" class="nav-link" data-scroll-target="#covariates-and-model-parameters">Covariates and Model Parameters</a></li>
+  <li><a href="#statistical-analysis" id="toc-statistical-analysis" class="nav-link" data-scroll-target="#statistical-analysis">Statistical Analysis</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/moccaram/syndemic-analysis/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/moccaram/syndemic-analysis/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/moccaram/syndemic-analysis/edit/main/methods.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/moccaram/syndemic-analysis/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Modeling the Syndemic Burden of Nutritional, Reproductive, and Healthcare-Access Risks Among Women in Bangladesh</h1>
-<p class="subtitle lead">Evidence from the Bangladesh Demographic and Health Survey 2022</p>
+<h1 class="title">Methods</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Mukarram Hosain </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">May 1, 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -225,144 +242,189 @@ div.csl-indent {
 </header>
 
 
-<section id="abstract" class="level2">
-<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
-<div class="abstract-box">
-<p><strong>Background.</strong> Women in Bangladesh experience overlapping nutritional, reproductive-health, and healthcare-access constraints. A syndemic lens is useful when such risks cluster within socially patterned contexts, but empirical claims require more than a simple count of co-occurring conditions.</p>
-<p><strong>Objective.</strong> This study estimated the burden, clustering, and social patterning of co-occurring risks among women aged 15–49 using BDHS 2022.</p>
-<p><strong>Methods.</strong> Nine binary indicators were grouped into nutritional, reproductive-health, and healthcare-access/autonomy domains. The primary outcome was the cumulative syndemic-burden score (range 0–9; observed 0–8), analyzed using survey-weighted quasi-Poisson regression and reported as incidence rate ratios (IRR). Ordinal logistic regression (low/medium/high burden) was used as a sensitivity analysis. All models incorporated BDHS sampling weights, primary sampling units, and strata.</p>
-<p><strong>Results.</strong> Among 11,657 women with recent births, 24.0% had a score of 0, 64.6% scored 1–3, and 11.4% scored ≥4 (high burden). Any reproductive-health risk affected 57.6% of women and any access/autonomy risk affected 73.8%. All three risk domains co-occurred more than expected under independence (observed/expected ratio 1.23). In the full quasi-Poisson model, higher respondent education (IRR 1.00 reference), rural residence (IRR 1.11, 95% CI 1.06–1.16), and lower wealth were associated with elevated burden, while working women had lower scores (IRR 0.94, 95% CI 0.91–0.98). Ordinal sensitivity results were directionally consistent.</p>
-<p><strong>Conclusion.</strong> The findings support a socially patterned cumulative-burden interpretation. Evidence for clustering is present, but the report avoids claiming definitive causal or biological synergy because the analysis is cross-sectional and lacks a downstream health outcome independent of the component risks.</p>
-</div>
-</section>
-<section id="study-snapshot" class="level2">
-<h2 class="anchored" data-anchor-id="study-snapshot">Study Snapshot</h2>
-<div class="metric-grid">
-<div class="metric">
-<p><span class="metric-value">11,657</span> <span class="metric-label">women in analytic sample</span></p>
-</div>
-<div class="metric">
-<p><span class="metric-value">11.4%</span> <span class="metric-label">high burden, score ≥4</span></p>
-</div>
-<div class="metric">
-<p><span class="metric-value">1.23</span> <span class="metric-label">observed/expected ratio, all 3 domains co-occurring</span></p>
-</div>
-<div class="metric">
-<p><span class="metric-value">IRR 1.11</span> <span class="metric-label">rural vs urban, quasi-Poisson full model</span></p>
-</div>
-<div class="metric">
-<p><span class="metric-value">IRR 2.06</span> <span class="metric-label">no education vs higher education</span></p>
-</div>
-<div class="metric">
-<p><span class="metric-value">IRR 1.39</span> <span class="metric-label">poorest vs richest wealth quintile</span></p>
-</div>
-</div>
-</section>
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Syndemic theory describes the clustering and interaction of health problems under harmful social conditions <span class="citation" data-cites="singer2017syndemics mendenhall2017ncd">(<a href="#ref-singer2017syndemics" role="doc-biblioref">Singer et al. 2017</a>; <a href="#ref-mendenhall2017ncd" role="doc-biblioref">Mendenhall et al. 2017</a>)</span>. The key distinction is that a syndemic is not merely multimorbidity. A defensible syndemic analysis should show clustering, identify social or structural drivers, and assess whether co-occurrence appears greater or more consequential than expected from independent risks <span class="citation" data-cites="tsai2018syndemics bulled2024guide">(<a href="#ref-tsai2018syndemics" role="doc-biblioref">Tsai 2018</a>; <a href="#ref-bulled2024guide" role="doc-biblioref">Bulled 2024</a>)</span>.</p>
-<p>Bangladesh is a strong setting for this framework because women’s health is shaped by intersecting nutritional vulnerability, early and high-parity reproduction, barriers to maternal healthcare, and constraints on decision-making autonomy. BDHS 2022 provides nationally representative data on women of reproductive age, household socioeconomic position, reproductive history, maternal service use, and healthcare access constraints <span class="citation" data-cites="niport2024bdhs worldbank2024bdhsmetadata">(<a href="#ref-niport2024bdhs" role="doc-biblioref">National Institute of Population Research and Training (NIPORT) and ICF 2024</a>; <a href="#ref-worldbank2024bdhsmetadata" role="doc-biblioref">World Bank Microdata Library 2024</a>)</span>.</p>
-<p>Prior Bangladesh evidence shows persistent socioeconomic inequalities in women’s undernutrition <span class="citation" data-cites="rahman2022undernutrition hossain2023doubleburden rahman2019doubleburden">(<a href="#ref-rahman2022undernutrition" role="doc-biblioref">Rahman et al. 2022</a>; <a href="#ref-hossain2023doubleburden" role="doc-biblioref">Hossain et al. 2023</a>; <a href="#ref-rahman2019doubleburden" role="doc-biblioref">Rahman et al. 2019</a>)</span>, geographic and wealth gradients in nutritional burden across Southeast Asia <span class="citation" data-cites="biswas2022southeastasia">(<a href="#ref-biswas2022southeastasia" role="doc-biblioref">Biswas et al. 2022</a>)</span>, and strong links between child marriage, adolescent motherhood, education, residence, and partner characteristics <span class="citation" data-cites="islam2021childmarriage unicef2025childmarriage who2024adolescentpregnancy">(<a href="#ref-islam2021childmarriage" role="doc-biblioref">Islam et al. 2021</a>; <a href="#ref-unicef2025childmarriage" role="doc-biblioref">UNICEF Data 2025</a>; <a href="#ref-who2024adolescentpregnancy" role="doc-biblioref">World Health Organization 2024</a>)</span>. Maternal healthcare studies similarly show that institutional delivery, antenatal care, and the continuum of care are patterned by wealth, education, residence, and women’s autonomy <span class="citation" data-cites="chakraborty2003maternal yaya2017delivery kamal2015institutional kamal2015skilledbirth khan2020urban khan2022continuum haider2017autonomy">(<a href="#ref-chakraborty2003maternal" role="doc-biblioref">Chakraborty et al. 2003</a>; <a href="#ref-yaya2017delivery" role="doc-biblioref">Yaya et al. 2017</a>; <a href="#ref-kamal2015institutional" role="doc-biblioref">Kamal, Hassan, and Alam 2015</a>; <a href="#ref-kamal2015skilledbirth" role="doc-biblioref">Kamal, Hassan, and Kabir 2015</a>; <a href="#ref-khan2020urban" role="doc-biblioref">Khan et al. 2020</a>, <a href="#ref-khan2022continuum" role="doc-biblioref">2022</a>; <a href="#ref-haider2017autonomy" role="doc-biblioref">Haider et al. 2017</a>)</span>. This study brings these strands together by modeling co-occurring risks as a cumulative burden.</p>
-<section id="study-aims" class="level3">
-<h3 class="anchored" data-anchor-id="study-aims">Study Aims</h3>
-<ol type="1">
-<li>Estimate the weighted prevalence of individual risk factors and cumulative burden.</li>
-<li>Assess whether nutritional, reproductive-health, and access/autonomy domains cluster more than expected under independence.</li>
-<li>Identify sociodemographic predictors of elevated burden using survey-weighted quasi-Poisson regression.</li>
-<li>Evaluate robustness with ordinal logistic and cutoff sensitivity analyses.</li>
-</ol>
-</section>
-</section>
-<section id="conceptual-framework" class="level2">
-<h2 class="anchored" data-anchor-id="conceptual-framework">Conceptual Framework</h2>
+<section id="data-source-and-study-population" class="level2">
+<h2 class="anchored" data-anchor-id="data-source-and-study-population">Data Source and Study Population</h2>
+<p>The analysis utilized the 2022 Bangladesh Demographic and Health Survey (BDHS), a nationally representative cross-sectional survey <span class="citation" data-cites="niport2024bdhs">(<a href="#ref-niport2024bdhs" role="doc-biblioref">National Institute of Population Research and Training (NIPORT) and ICF 2024</a>)</span>. The study population was restricted to ever-married women aged 15–49 who had a live birth in the three years preceding the survey to ensure the availability of maternal healthcare and decision-making indicators.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
-<pre class="mermaid mermaid-js">graph LR
-    A["STRUCTURAL DRIVERS&lt;br&gt;Socioeconomic status&lt;br&gt;Education opportunities&lt;br&gt;Residence and Geography&lt;br&gt;Policy environment"]
-    B["SOCIAL ENVIRONMENT&lt;br&gt;Employment status&lt;br&gt;Household dynamics&lt;br&gt;Healthcare quality&lt;br&gt;Gender-based autonomy"]
-    C["PATHWAYS&lt;br&gt;Nutritional intake&lt;br&gt;Reproductive timing&lt;br&gt;Birth spacing&lt;br&gt;Service utilization"]
-    D["SYNDEMIC CLUSTERS&lt;br&gt;Nutritional Risks&lt;br&gt;Reproductive Risks&lt;br&gt;Healthcare-Access Risks"]
-    E["OUTCOMES&lt;br&gt;Cumulative score (0-8)&lt;br&gt;Low, Medium, High burden"]
+<pre class="mermaid mermaid-js">graph TD
+    A["Ever-married women interviewed (15–49 years)&lt;br/&gt;(N = 30,344)"]
+
+    E1["Excluded: No live birth in the 3 years&lt;br/&gt;preceding the survey (n = 18,687)"]
+
+    B["&lt;b&gt;Analytic sample for descriptive statistics&lt;/b&gt;&lt;br/&gt;(n = 11,657)"]
+
+    E2["Excluded: Missing values in multivariable&lt;br/&gt;model covariates (n = 4,031)"]
+
+    C["&lt;b&gt;Final sample for multivariable modeling&lt;/b&gt;&lt;br/&gt;(n = 7,626)"]
 
     A --&gt; B
+    A -.-&gt; E1
     B --&gt; C
-    C --&gt; D
-    D --&gt; E
-    E -.-&gt; A
+    B -.-&gt; E2
+
+    %% Styling
+    style B fill:#f0f7ff,stroke:#0056b3,stroke-width:2px
+    style C fill:#f4fff4,stroke:#2e7d32,stroke-width:2px
 </pre>
 </div>
 <p></p></figure><p></p>
 </div>
 </div>
 </div>
-<p>The framework (adapted from Solar &amp; Irwin, 2010 and Tsai, 2024) treats social determinants as upstream conditions that pattern multiple proximal risk domains. The feedback loop at the bottom represents the <strong>biosocial nature</strong> of syndemics: the accumulated health burden (outcomes) can reinforce and exacerbate the very structural and social inequalities that initially produced the risks.</p>
-<p>The remainder of the report is organized into <a href="./methods.html">Methods</a>, <a href="./results.html">Results</a>, <a href="./discussion.html">Discussion</a>, and a <a href="./appendix.html">Supplementary Appendix</a>.</p>
+<p>Due to the nature of survey skip patterns and item-level non-response, a complete-case approach requiring all nine risk indicators to be observed would have restricted the sample to 1,531 women (13.1% of those with recent births). To maintain population representativeness and statistical power, the primary analysis utilized an <strong>available-indicator</strong> cumulative score, including all 11,657 women for descriptive analysis and 7,626 women for the multivariable modeling where covariate data were complete.</p>
+</section>
+<section id="outcome-and-risk-domains" class="level2">
+<h2 class="anchored" data-anchor-id="outcome-and-risk-domains">Outcome and Risk Domains</h2>
+<p>Nine binary risk indicators were grouped into three functional domains to capture the multi-dimensional nature of the syndemic burden.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">Domain =</span> <span class="fu">c</span>(<span class="st">"Nutritional"</span>, <span class="st">"Reproductive health"</span>, <span class="st">"Healthcare access and autonomy"</span>, <span class="st">"**Total Syndemic Score**"</span>),</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">Indicators =</span> <span class="fu">c</span>(</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Underweight (BMI &lt; 18.5); stunted height (&lt; 145 cm)"</span>,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Adolescent first birth (&lt; 20y); high parity (&gt; 4); short birth interval (&lt; 24m); home delivery"</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Inadequate ANC (&lt; 4 visits); distance to facility (major problem); low health autonomy"</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Sum of all nine binary indicators (dichotomized 0/1)"</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Score Range</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"0–2"</span>, <span class="st">"0–4"</span>, <span class="st">"0–3"</span>, <span class="st">"**0–9**"</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">caption =</span> <span class="st">"Syndemic risk domains, indicators, and score construction"</span>, <span class="at">align =</span> <span class="st">"llc"</span>, <span class="at">escape =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Syndemic risk domains, indicators, and score construction</caption>
+<colgroup>
+<col style="width: 22%">
+<col style="width: 68%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Domain</th>
+<th style="text-align: left;">Indicators</th>
+<th style="text-align: center;">Score Range</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Nutritional</td>
+<td style="text-align: left;">Underweight (BMI &lt; 18.5); stunted height (&lt; 145 cm)</td>
+<td style="text-align: center;">0–2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Reproductive health</td>
+<td style="text-align: left;">Adolescent first birth (&lt; 20y); high parity (&gt; 4); short birth interval (&lt; 24m); home delivery</td>
+<td style="text-align: center;">0–4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Healthcare access and autonomy</td>
+<td style="text-align: left;">Inadequate ANC (&lt; 4 visits); distance to facility (major problem); low health autonomy</td>
+<td style="text-align: center;">0–3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Total Syndemic Score</strong></td>
+<td style="text-align: left;">Sum of all nine binary indicators (dichotomized 0/1)</td>
+<td style="text-align: center;"><strong>0–9</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>For descriptive reporting and sensitivity analysis, the total score was collapsed into three ordered categories: <strong>Low burden</strong> (score 0), <strong>Medium burden</strong> (score 1–3), and <strong>High burden</strong> (score ≥ 4).</p>
+</section>
+<section id="covariates-and-model-parameters" class="level2">
+<h2 class="anchored" data-anchor-id="covariates-and-model-parameters">Covariates and Model Parameters</h2>
+<p>Multivariable models included sociodemographic factors identified in the literature as key drivers of maternal and nutritional health in Bangladesh.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Variable Group</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Demographic"</span>, <span class="st">"Socioeconomic"</span>, <span class="st">"Geography"</span>, <span class="st">"Empowerment"</span>),</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Covariates (Levels)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Age group (15–24, 25–34, 35–49)"</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Respondent education (No education, Primary, Secondary, Higher); Wealth quintile (Poorest to Richest); Husband's education"</span>,</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Administrative Division (8 regions); Type of residence (Urban, Rural)"</span>,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Employment status (Working, Not working)"</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Reference Category</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"15–24 years"</span>, <span class="st">"Higher education; Richest quintile"</span>, <span class="st">"Dhaka Division; Urban residence"</span>, <span class="st">"Not working"</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">caption =</span> <span class="st">"Covariates included in multivariable regression models"</span>, <span class="at">align =</span> <span class="st">"lll"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Covariates included in multivariable regression models</caption>
+<colgroup>
+<col style="width: 8%">
+<col style="width: 71%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Variable Group</th>
+<th style="text-align: left;">Covariates (Levels)</th>
+<th style="text-align: left;">Reference Category</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Demographic</td>
+<td style="text-align: left;">Age group (15–24, 25–34, 35–49)</td>
+<td style="text-align: left;">15–24 years</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Socioeconomic</td>
+<td style="text-align: left;">Respondent education (No education, Primary, Secondary, Higher); Wealth quintile (Poorest to Richest); Husband’s education</td>
+<td style="text-align: left;">Higher education; Richest quintile</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Geography</td>
+<td style="text-align: left;">Administrative Division (8 regions); Type of residence (Urban, Rural)</td>
+<td style="text-align: left;">Dhaka Division; Urban residence</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Empowerment</td>
+<td style="text-align: left;">Employment status (Working, Not working)</td>
+<td style="text-align: left;">Not working</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="statistical-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="statistical-analysis">Statistical Analysis</h2>
+<p>All descriptive and regression analyses incorporated BDHS survey weights, strata, and primary sampling units using R’s <code>survey</code> package <span class="citation" data-cites="lumley2004survey lumley2010complex">(<a href="#ref-lumley2004survey" role="doc-biblioref">Lumley 2004</a>, <a href="#ref-lumley2010complex" role="doc-biblioref">2010</a>)</span>.</p>
+<p><strong>Primary model:</strong> Survey-weighted quasi-Poisson regression (<code>svyglm</code>, <code>family = quasipoisson</code>) for the raw syndemic score (0–8). The quasi-Poisson family was selected because the score is a bounded integer with mild overdispersion relative to a simple Poisson process (observed variance/mean ratio = 1.23; svyglm dispersion φ = 0.77; diagnostic weighted GLM φ = 1.08). Negative binomial regression was evaluated but yielded an equivalent fit (θ = 22.20), confirming that quasi-Poisson was sufficient. Results are reported as incidence rate ratios (IRR) with 95% confidence intervals <span class="citation" data-cites="hilbe2011negbin gardner1995regression">(<a href="#ref-hilbe2011negbin" role="doc-biblioref">Hilbe 2011</a>; <a href="#ref-gardner1995regression" role="doc-biblioref">Gardner et al. 1995</a>)</span>.</p>
+<p><strong>Sensitivity analysis:</strong> Ordinal proportional-odds logistic regression for low/medium/high burden categories <span class="citation" data-cites="mccullagh1980regression liu2016proportional">(<a href="#ref-mccullagh1980regression" role="doc-biblioref">McCullagh 1980</a>; <a href="#ref-liu2016proportional" role="doc-biblioref">Liu 2016</a>)</span>. The ordinal model provides a complementary perspective using the collapsed categorical outcome; its results are reported in the <a href="./appendix.html">Supplementary Appendix</a>.</p>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-biswas2022southeastasia" class="csl-entry" role="listitem">
-Biswas, Tuhin, Nick Townsend, Ricardo Magalhaes, Md Mehedi Hasan, and Abdullah Al Mamun. 2022. <span>“Geographical and Socioeconomic Inequalities in the Double Burden of Malnutrition Among Women in Southeast Asia: A Population-Based Study.”</span> <em>The Lancet Regional Health - Southeast Asia</em> 1: 100007. <a href="https://doi.org/10.1016/j.lansea.2022.04.003">https://doi.org/10.1016/j.lansea.2022.04.003</a>.
+<div id="ref-gardner1995regression" class="csl-entry" role="listitem">
+Gardner, William, Edward P. Mulvey, and Esther C. Shaw. 1995. <span>“Regression Analyses of Counts and Rates: Poisson, Overdispersed Poisson, and Negative Binomial Models.”</span> <em>Psychological Bulletin</em> 118 (3): 392–404. <a href="https://doi.org/10.1037/0033-2909.118.3.392">https://doi.org/10.1037/0033-2909.118.3.392</a>.
 </div>
-<div id="ref-bulled2024guide" class="csl-entry" role="listitem">
-Bulled, Nicola. 2024. <span>“Recommendations for Empirical Syndemics Analyses: A Stepwise Methodological Guide.”</span> <em>Heliyon</em> 10 (19): e38931. <a href="https://doi.org/10.1016/j.heliyon.2024.e38931">https://doi.org/10.1016/j.heliyon.2024.e38931</a>.
+<div id="ref-hilbe2011negbin" class="csl-entry" role="listitem">
+Hilbe, Joseph M. 2011. <em>Negative Binomial Regression</em>. 2nd ed. Cambridge University Press.
 </div>
-<div id="ref-chakraborty2003maternal" class="csl-entry" role="listitem">
-Chakraborty, Nitai, M. Atahar Islam, Rafiqul Islam Chowdhury, Wasimul Bari, and H. H. Akhter. 2003. <span>“Determinants of the Use of Maternal Health Services in Rural Bangladesh.”</span> <em>Health Promotion International</em> 18 (4): 327–37. <a href="https://doi.org/10.1093/heapro/dag414">https://doi.org/10.1093/heapro/dag414</a>.
+<div id="ref-liu2016proportional" class="csl-entry" role="listitem">
+Liu, Xing. 2016. <span>“Fitting Proportional Odds Models for Complex Sample Survey Data with SAS, IBM SPSS, Stata, and r.”</span> <em>General Linear Model Journal</em> 42 (2): 1–13. <a href="https://ojs.lib.ua.edu/glmj/article/view/300">https://ojs.lib.ua.edu/glmj/article/view/300</a>.
 </div>
-<div id="ref-haider2017autonomy" class="csl-entry" role="listitem">
-Haider, Mohammad Rifat, Zaina P. Qureshi, and M. Mahmud Khan. 2017. <span>“Effects of Women’s Autonomy on Maternal Healthcare Utilization in Bangladesh: Evidence from a National Survey.”</span> <em>Sexual &amp; Reproductive Healthcare</em> 14: 40–47. <a href="https://doi.org/10.1016/j.srhc.2017.09.002">https://doi.org/10.1016/j.srhc.2017.09.002</a>.
+<div id="ref-lumley2004survey" class="csl-entry" role="listitem">
+Lumley, Thomas. 2004. <span>“Analysis of Complex Survey Samples.”</span> <em>Journal of Statistical Software</em> 9 (8): 1–19. <a href="https://doi.org/10.18637/jss.v009.i08">https://doi.org/10.18637/jss.v009.i08</a>.
 </div>
-<div id="ref-hossain2023doubleburden" class="csl-entry" role="listitem">
-Hossain, Md Ismail, Azizur Rahman, M. Sheikh Giash Uddin, and Faozia Afia Zinia. 2023. <span>“Double Burden of Malnutrition Among Women of Reproductive Age in Bangladesh: A Comparative Study of Classical and Bayesian Logistic Regression Approach.”</span> <em>Food Science &amp; Nutrition</em> 11 (4): 1785–96. <a href="https://doi.org/10.1002/fsn3.3209">https://doi.org/10.1002/fsn3.3209</a>.
+<div id="ref-lumley2010complex" class="csl-entry" role="listitem">
+Lumley, Thomas. 2010. <em>Complex Surveys: A Guide to Analysis Using r</em>. Wiley.
 </div>
-<div id="ref-islam2021childmarriage" class="csl-entry" role="listitem">
-Islam, M. Mazharul, Md. Kamrul Islam, Md. Shahin Hasan, and Md. Bellal Hossain. 2021. <span>“Child Marriage and Adolescent Motherhood: A Nationwide Vulnerability for Women in Bangladesh.”</span> <em>International Journal of Environmental Research and Public Health</em> 18 (8): 4030. <a href="https://doi.org/10.3390/ijerph18084030">https://doi.org/10.3390/ijerph18084030</a>.
-</div>
-<div id="ref-kamal2015institutional" class="csl-entry" role="listitem">
-Kamal, S. M. Mostafa, Che Hashim Hassan, and Gazi Mahabubul Alam. 2015. <span>“Determinants of Institutional Delivery Among Women in Bangladesh.”</span> <em>Asia Pacific Journal of Public Health</em> 27 (2): NP1372–88. <a href="https://doi.org/10.1177/1010539513486178">https://doi.org/10.1177/1010539513486178</a>.
-</div>
-<div id="ref-kamal2015skilledbirth" class="csl-entry" role="listitem">
-Kamal, S. M. Mostafa, Che Hashim Hassan, and M. A. Kabir. 2015. <span>“Inequality of the Use of Skilled Birth Assistance Among Rural Women in Bangladesh.”</span> <em>Asia Pacific Journal of Public Health</em> 27 (2): NP1321–31. <a href="https://doi.org/10.1177/1010539513483823">https://doi.org/10.1177/1010539513483823</a>.
-</div>
-<div id="ref-khan2022continuum" class="csl-entry" role="listitem">
-Khan, Md. Nuruzzaman, Md. Mofizul Islam, Abusaleh Shariff, Md. Moudud Alam, and Mizanur Rahman. 2022. <span>“Socioeconomic Inequalities in the Continuum of Care Across Women’s Reproductive Life Cycle in Bangladesh.”</span> <em>Scientific Reports</em> 12: 15508. <a href="https://doi.org/10.1038/s41598-022-19888-w">https://doi.org/10.1038/s41598-022-19888-w</a>.
-</div>
-<div id="ref-khan2020urban" class="csl-entry" role="listitem">
-Khan, Md. Nuruzzaman, Pushpendra Kumar, Md. Mijanur Rahman, Md. Nazrul Islam Mondal, and M. Mofizul Islam. 2020. <span>“Inequalities in Utilization of Maternal Reproductive Health Care Services in Urban Bangladesh: A Population-Based Study.”</span> <em>SAGE Open</em> 10 (2). <a href="https://doi.org/10.1177/2158244020914394">https://doi.org/10.1177/2158244020914394</a>.
-</div>
-<div id="ref-mendenhall2017ncd" class="csl-entry" role="listitem">
-Mendenhall, Emily, Brandon A. Kohrt, Shane A. Norris, David Ndetei, and Dorairaj Prabhakaran. 2017. <span>“Non-Communicable Disease Syndemics: Poverty, Depression, and Diabetes Among Low-Income Populations.”</span> <em>The Lancet</em> 389 (10072): 951–63. <a href="https://doi.org/10.1016/S0140-6736(17)30402-6">https://doi.org/10.1016/S0140-6736(17)30402-6</a>.
+<div id="ref-mccullagh1980regression" class="csl-entry" role="listitem">
+McCullagh, Peter. 1980. <span>“Regression Models for Ordinal Data.”</span> <em>Journal of the Royal Statistical Society: Series B</em> 42 (2): 109–42.
 </div>
 <div id="ref-niport2024bdhs" class="csl-entry" role="listitem">
 National Institute of Population Research and Training (NIPORT), and ICF. 2024. <em>Bangladesh Demographic and Health Survey 2022: Final Report</em>. NIPORT; ICF. <a href="https://www.dhsprogram.com/publications/publication-FR386-DHS-Final-Reports.cfm">https://www.dhsprogram.com/publications/publication-FR386-DHS-Final-Reports.cfm</a>.
-</div>
-<div id="ref-rahman2019doubleburden" class="csl-entry" role="listitem">
-Rahman, M. A., M. M. Rahman, M. M. Rahman, and S. S. Jesmin. 2019. <span>“The Double Burden of Under- and Overnutrition Among Bangladeshi Women: Socioeconomic and Community-Level Inequalities.”</span> <em>PLOS ONE</em> 14 (7): e0219968. <a href="https://doi.org/10.1371/journal.pone.0219968">https://doi.org/10.1371/journal.pone.0219968</a>.
-</div>
-<div id="ref-rahman2022undernutrition" class="csl-entry" role="listitem">
-Rahman, Mahfuzur, Md. Tariqujjaman, Md. Rayhanul Islam, et al. 2022. <span>“Socioeconomic Inequalities in Women’s Undernutrition: Evidence from Nationally Representative Cross-Sectional Bangladesh Demographic and Health Survey 2017-2018.”</span> <em>International Journal of Environmental Research and Public Health</em> 19 (8): 4698. <a href="https://doi.org/10.3390/ijerph19084698">https://doi.org/10.3390/ijerph19084698</a>.
-</div>
-<div id="ref-singer2017syndemics" class="csl-entry" role="listitem">
-Singer, Merrill, Nicola Bulled, Bayla Ostrach, and Emily Mendenhall. 2017. <span>“Syndemics and the Biosocial Conception of Health.”</span> <em>The Lancet</em> 389 (10072): 941–50. <a href="https://doi.org/10.1016/S0140-6736(17)30003-X">https://doi.org/10.1016/S0140-6736(17)30003-X</a>.
-</div>
-<div id="ref-tsai2018syndemics" class="csl-entry" role="listitem">
-Tsai, Alexander C. 2018. <span>“Syndemics: A Theory in Search of Data or Data in Search of a Theory?”</span> <em>Social Science &amp; Medicine</em> 206: 117–22. <a href="https://doi.org/10.1016/j.socscimed.2018.03.040">https://doi.org/10.1016/j.socscimed.2018.03.040</a>.
-</div>
-<div id="ref-unicef2025childmarriage" class="csl-entry" role="listitem">
-UNICEF Data. 2025. <em>Child Marriage in Bangladesh</em>. <a href="https://childmarriagedata.org/country-profiles/bangladesh/">https://childmarriagedata.org/country-profiles/bangladesh/</a>.
-</div>
-<div id="ref-worldbank2024bdhsmetadata" class="csl-entry" role="listitem">
-World Bank Microdata Library. 2024. <em>Bangladesh - Demographic and Health Survey 2022</em>. <a href="https://microdata.worldbank.org/catalog/6290">https://microdata.worldbank.org/catalog/6290</a>.
-</div>
-<div id="ref-who2024adolescentpregnancy" class="csl-entry" role="listitem">
-World Health Organization. 2024. <em>Adolescent Pregnancy</em>. <a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-pregnancy">https://www.who.int/news-room/fact-sheets/detail/adolescent-pregnancy</a>.
-</div>
-<div id="ref-yaya2017delivery" class="csl-entry" role="listitem">
-Yaya, Sanni, Ghose Bishwajit, and Michael Ekholuenetale. 2017. <span>“Factors Associated with the Utilization of Institutional Delivery Services in Bangladesh.”</span> <em>PLOS ONE</em> 12 (2): e0171573. <a href="https://doi.org/10.1371/journal.pone.0171573">https://doi.org/10.1371/journal.pone.0171573</a>.
 </div>
 </div>
 
@@ -778,7 +840,7 @@ Yaya, Sanni, Ghose Bishwajit, and Michael Ekholuenetale. 2017. <span>“Factors 
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/moccaram/syndemic-analysis/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/moccaram/syndemic-analysis/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/moccaram/syndemic-analysis/edit/main/methods.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/moccaram/syndemic-analysis/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Built with ❤︎ and <a href="https://quarto.org/">Quarto</a></p>
 </div>
