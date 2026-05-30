@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://moccaram.github.io/syndemic-analysis/results.html</loc>
+    <lastmod>2026-05-30T19:35:21.808Z</lastmod>
+  </url>
+  <url>
     <loc>https://moccaram.github.io/syndemic-analysis/index.html</loc>
-    <lastmod>2026-05-30T19:28:01.428Z</lastmod>
+    <lastmod>2026-05-30T19:35:21.805Z</lastmod>
+  </url>
+  <url>
+    <loc>https://moccaram.github.io/syndemic-analysis/appendix.html</loc>
+    <lastmod>2026-05-30T19:35:21.802Z</lastmod>
+  </url>
+  <url>
+    <loc>https://moccaram.github.io/syndemic-analysis/discussion.html</loc>
+    <lastmod>2026-05-30T19:35:21.803Z</lastmod>
+  </url>
+  <url>
+    <loc>https://moccaram.github.io/syndemic-analysis/methods.html</loc>
+    <lastmod>2026-05-30T19:35:21.806Z</lastmod>
   </url>
 </urlset>

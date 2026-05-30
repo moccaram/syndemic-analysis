@@ -5,6 +5,22 @@ website:
   repo-url: https://github.com/moccaram/syndemic-analysis
   repo-actions: [edit, issue]
   reader-mode: true
+  sidebar:
+    style: docked
+    pinned: true
+    foreground: "primary"
+    background: "#ebecf7"
+    contents:
+      - text: "Overview"
+        file: index.qmd
+      - text: "Methods"
+        file: methods.qmd
+      - text: "Results"
+        file: results.qmd
+      - text: "Discussion"
+        file: discussion.qmd
+      - text: "Supplementary Appendix"
+        file: appendix.qmd
   page-footer:
     left: |
       &copy; 2026 Mukarram Hosain.
