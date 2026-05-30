@@ -25,6 +25,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -62,7 +97,7 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-77fa92fe4bb62883f4bbdc28ef35cd19.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-c28b9f645fb766896c2c3ef7d927b684.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -98,81 +133,12 @@ div.csl-indent {
 
 </head>
 
-<body class="nav-sidebar docked quarto-light">
+<body class="quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Overview</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
-</header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">Syndemic Burden Among Bangladeshi Women</a> 
-        <div class="sidebar-tools-main">
-  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
-  <div class="quarto-reader-toggle-btn">
-  <i class="bi"></i>
-  </div>
-</a>
-</div>
-    </div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Overview</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./methods.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Methods</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./results.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Results</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./discussion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Discussion</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./appendix.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Supplementary Appendix</span></a>
-  </div>
-</li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -186,6 +152,40 @@ div.csl-indent {
   <li><a href="#study-aims" id="toc-study-aims" class="nav-link" data-scroll-target="#study-aims">Study Aims</a></li>
   </ul></li>
   <li><a href="#conceptual-framework" id="toc-conceptual-framework" class="nav-link" data-scroll-target="#conceptual-framework">Conceptual Framework</a></li>
+  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a>
+  <ul class="collapse">
+  <li><a href="#data-source-and-study-population" id="toc-data-source-and-study-population" class="nav-link" data-scroll-target="#data-source-and-study-population">Data Source and Study Population</a></li>
+  <li><a href="#outcome-and-risk-domains" id="toc-outcome-and-risk-domains" class="nav-link" data-scroll-target="#outcome-and-risk-domains">Outcome and Risk Domains</a></li>
+  <li><a href="#covariates-and-model-parameters" id="toc-covariates-and-model-parameters" class="nav-link" data-scroll-target="#covariates-and-model-parameters">Covariates and Model Parameters</a></li>
+  <li><a href="#statistical-analysis" id="toc-statistical-analysis" class="nav-link" data-scroll-target="#statistical-analysis">Statistical Analysis</a></li>
+  </ul></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a>
+  <ul class="collapse">
+  <li><a href="#risk-factor-prevalence" id="toc-risk-factor-prevalence" class="nav-link" data-scroll-target="#risk-factor-prevalence">Risk Factor Prevalence</a></li>
+  <li><a href="#syndemic-score-distribution" id="toc-syndemic-score-distribution" class="nav-link" data-scroll-target="#syndemic-score-distribution">Syndemic Score Distribution</a></li>
+  <li><a href="#syndemic-burden-categories" id="toc-syndemic-burden-categories" class="nav-link" data-scroll-target="#syndemic-burden-categories">Syndemic Burden Categories</a></li>
+  <li><a href="#sociodemographic-and-geographic-patterning" id="toc-sociodemographic-and-geographic-patterning" class="nav-link" data-scroll-target="#sociodemographic-and-geographic-patterning">Sociodemographic and Geographic Patterning</a></li>
+  <li><a href="#multivariable-quasi-poisson-regression-primary-model" id="toc-multivariable-quasi-poisson-regression-primary-model" class="nav-link" data-scroll-target="#multivariable-quasi-poisson-regression-primary-model">Multivariable Quasi-Poisson Regression (Primary Model)</a></li>
+  <li><a href="#interaction-and-sensitivity-checks" id="toc-interaction-and-sensitivity-checks" class="nav-link" data-scroll-target="#interaction-and-sensitivity-checks">Interaction and Sensitivity Checks</a></li>
+  </ul></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a>
+  <ul class="collapse">
+  <li><a href="#principal-findings" id="toc-principal-findings" class="nav-link" data-scroll-target="#principal-findings">Principal Findings</a></li>
+  <li><a href="#interpretation-in-light-of-prior-evidence" id="toc-interpretation-in-light-of-prior-evidence" class="nav-link" data-scroll-target="#interpretation-in-light-of-prior-evidence">Interpretation in Light of Prior Evidence</a></li>
+  <li><a href="#policy-implications" id="toc-policy-implications" class="nav-link" data-scroll-target="#policy-implications">Policy Implications</a></li>
+  <li><a href="#strengths-and-limitations" id="toc-strengths-and-limitations" class="nav-link" data-scroll-target="#strengths-and-limitations">Strengths and Limitations</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#supplementary-appendix" id="toc-supplementary-appendix" class="nav-link" data-scroll-target="#supplementary-appendix">Supplementary Appendix</a>
+  <ul class="collapse">
+  <li><a href="#s1.-sample-characteristics" id="toc-s1.-sample-characteristics" class="nav-link" data-scroll-target="#s1.-sample-characteristics">S1. Sample Characteristics</a></li>
+  <li><a href="#s2.-domain-co-occurrence-and-clustering" id="toc-s2.-domain-co-occurrence-and-clustering" class="nav-link" data-scroll-target="#s2.-domain-co-occurrence-and-clustering">S2. Domain Co-occurrence and Clustering</a></li>
+  <li><a href="#s3.-model-diagnostics" id="toc-s3.-model-diagnostics" class="nav-link" data-scroll-target="#s3.-model-diagnostics">S3. Model Diagnostics</a></li>
+  <li><a href="#s4.-ordinal-sensitivity-analysis-full-results" id="toc-s4.-ordinal-sensitivity-analysis-full-results" class="nav-link" data-scroll-target="#s4.-ordinal-sensitivity-analysis-full-results">S4. Ordinal Sensitivity Analysis — Full Results</a></li>
+  <li><a href="#s5.-missingness-summary" id="toc-s5.-missingness-summary" class="nav-link" data-scroll-target="#s5.-missingness-summary">S5. Missingness Summary</a></li>
+  <li><a href="#s6.-available-indicator-vs-complete-case-score-sensitivity" id="toc-s6.-available-indicator-vs-complete-case-score-sensitivity" class="nav-link" data-scroll-target="#s6.-available-indicator-vs-complete-case-score-sensitivity">S6. Available-Indicator vs Complete-Case Score Sensitivity</a></li>
+  <li><a href="#s7.-very-high-burden-by-division-score-6" id="toc-s7.-very-high-burden-by-division-score-6" class="nav-link" data-scroll-target="#s7.-very-high-burden-by-division-score-6">S7. Very High Burden by Division (score ≥6)</a></li>
+  </ul></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/moccaram/syndemic-analysis/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/moccaram/syndemic-analysis/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -299,7 +299,1694 @@ div.csl-indent {
 </div>
 </div>
 <p>The framework (adapted from Solar &amp; Irwin, 2010 and Tsai, 2024) treats social determinants as upstream conditions that pattern multiple proximal risk domains. The feedback loop at the bottom represents the <strong>biosocial nature</strong> of syndemics: the accumulated health burden (outcomes) can reinforce and exacerbate the very structural and social inequalities that initially produced the risks.</p>
-<p>The remainder of the report is organized into <a href="./methods.html">Methods</a>, <a href="./results.html">Results</a>, <a href="./discussion.html">Discussion</a>, and a <a href="./appendix.html">Supplementary Appendix</a>.</p>
+</section>
+<section id="methods" class="level2">
+<h2 class="anchored" data-anchor-id="methods">Methods</h2>
+<section id="data-source-and-study-population" class="level3">
+<h3 class="anchored" data-anchor-id="data-source-and-study-population">Data Source and Study Population</h3>
+<p>The analysis utilized the 2022 Bangladesh Demographic and Health Survey (BDHS), a nationally representative cross-sectional survey <span class="citation" data-cites="niport2024bdhs">(<a href="#ref-niport2024bdhs" role="doc-biblioref">National Institute of Population Research and Training (NIPORT) and ICF 2024</a>)</span>. The study population was restricted to ever-married women aged 15–49 who had a live birth in the three years preceding the survey to ensure the availability of maternal healthcare and decision-making indicators.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph TD
+    A["Ever-married women interviewed (15–49 years)&lt;br/&gt;(N = 30,344)"]
+
+    E1["Excluded: No live birth in the 3 years&lt;br/&gt;preceding the survey (n = 18,687)"]
+
+    B["&lt;b&gt;Analytic sample for descriptive statistics&lt;/b&gt;&lt;br/&gt;(n = 11,657)"]
+
+    E2["Excluded: Missing values in multivariable&lt;br/&gt;model covariates (n = 4,031)"]
+
+    C["&lt;b&gt;Final sample for multivariable modeling&lt;/b&gt;&lt;br/&gt;(n = 7,626)"]
+
+    A --&gt; B
+    A -.-&gt; E1
+    B --&gt; C
+    B -.-&gt; E2
+
+    %% Styling
+    style B fill:#f0f7ff,stroke:#0056b3,stroke-width:2px
+    style C fill:#f4fff4,stroke:#2e7d32,stroke-width:2px
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Due to the nature of survey skip patterns and item-level non-response, a complete-case approach requiring all nine risk indicators to be observed would have restricted the sample to 1,531 women (13.1% of those with recent births). To maintain population representativeness and statistical power, the primary analysis utilized an <strong>available-indicator</strong> cumulative score, including all 11,657 women for descriptive analysis and 7,626 women for the multivariable modeling where covariate data were complete.</p>
+</section>
+<section id="outcome-and-risk-domains" class="level3">
+<h3 class="anchored" data-anchor-id="outcome-and-risk-domains">Outcome and Risk Domains</h3>
+<p>Nine binary risk indicators were grouped into three functional domains to capture the multi-dimensional nature of the syndemic burden.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">Domain =</span> <span class="fu">c</span>(<span class="st">"Nutritional"</span>, <span class="st">"Reproductive health"</span>, <span class="st">"Healthcare access and autonomy"</span>, <span class="st">"**Total Syndemic Score**"</span>),</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">Indicators =</span> <span class="fu">c</span>(</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Underweight (BMI &lt; 18.5); stunted height (&lt; 145 cm)"</span>,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Adolescent first birth (&lt; 20y); high parity (&gt; 4); short birth interval (&lt; 24m); home delivery"</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Inadequate ANC (&lt; 4 visits); distance to facility (major problem); low health autonomy"</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Sum of all nine binary indicators (dichotomized 0/1)"</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Score Range</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"0–2"</span>, <span class="st">"0–4"</span>, <span class="st">"0–3"</span>, <span class="st">"**0–9**"</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">caption =</span> <span class="st">"Syndemic risk domains, indicators, and score construction"</span>, <span class="at">align =</span> <span class="st">"llc"</span>, <span class="at">escape =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Syndemic risk domains, indicators, and score construction</caption>
+<colgroup>
+<col style="width: 22%">
+<col style="width: 68%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Domain</th>
+<th style="text-align: left;">Indicators</th>
+<th style="text-align: center;">Score Range</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Nutritional</td>
+<td style="text-align: left;">Underweight (BMI &lt; 18.5); stunted height (&lt; 145 cm)</td>
+<td style="text-align: center;">0–2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Reproductive health</td>
+<td style="text-align: left;">Adolescent first birth (&lt; 20y); high parity (&gt; 4); short birth interval (&lt; 24m); home delivery</td>
+<td style="text-align: center;">0–4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Healthcare access and autonomy</td>
+<td style="text-align: left;">Inadequate ANC (&lt; 4 visits); distance to facility (major problem); low health autonomy</td>
+<td style="text-align: center;">0–3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Total Syndemic Score</strong></td>
+<td style="text-align: left;">Sum of all nine binary indicators (dichotomized 0/1)</td>
+<td style="text-align: center;"><strong>0–9</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>For descriptive reporting and sensitivity analysis, the total score was collapsed into three ordered categories: <strong>Low burden</strong> (score 0), <strong>Medium burden</strong> (score 1–3), and <strong>High burden</strong> (score ≥ 4).</p>
+</section>
+<section id="covariates-and-model-parameters" class="level3">
+<h3 class="anchored" data-anchor-id="covariates-and-model-parameters">Covariates and Model Parameters</h3>
+<p>Multivariable models included sociodemographic factors identified in the literature as key drivers of maternal and nutritional health in Bangladesh.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Variable Group</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Demographic"</span>, <span class="st">"Socioeconomic"</span>, <span class="st">"Geography"</span>, <span class="st">"Empowerment"</span>),</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Covariates (Levels)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Age group (15–24, 25–34, 35–49)"</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Respondent education (No education, Primary, Secondary, Higher); Wealth quintile (Poorest to Richest); Husband's education"</span>,</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Administrative Division (8 regions); Type of residence (Urban, Rural)"</span>,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Employment status (Working, Not working)"</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Reference Category</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"15–24 years"</span>, <span class="st">"Higher education; Richest quintile"</span>, <span class="st">"Dhaka Division; Urban residence"</span>, <span class="st">"Not working"</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">caption =</span> <span class="st">"Covariates included in multivariable regression models"</span>, <span class="at">align =</span> <span class="st">"lll"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Covariates included in multivariable regression models</caption>
+<colgroup>
+<col style="width: 8%">
+<col style="width: 71%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Variable Group</th>
+<th style="text-align: left;">Covariates (Levels)</th>
+<th style="text-align: left;">Reference Category</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Demographic</td>
+<td style="text-align: left;">Age group (15–24, 25–34, 35–49)</td>
+<td style="text-align: left;">15–24 years</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Socioeconomic</td>
+<td style="text-align: left;">Respondent education (No education, Primary, Secondary, Higher); Wealth quintile (Poorest to Richest); Husband’s education</td>
+<td style="text-align: left;">Higher education; Richest quintile</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Geography</td>
+<td style="text-align: left;">Administrative Division (8 regions); Type of residence (Urban, Rural)</td>
+<td style="text-align: left;">Dhaka Division; Urban residence</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Empowerment</td>
+<td style="text-align: left;">Employment status (Working, Not working)</td>
+<td style="text-align: left;">Not working</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="statistical-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="statistical-analysis">Statistical Analysis</h3>
+<p>All descriptive and regression analyses incorporated BDHS survey weights, strata, and primary sampling units using R’s <code>survey</code> package <span class="citation" data-cites="lumley2004survey lumley2010complex">(<a href="#ref-lumley2004survey" role="doc-biblioref">Lumley 2004</a>, <a href="#ref-lumley2010complex" role="doc-biblioref">2010</a>)</span>.</p>
+<p><strong>Primary model:</strong> Survey-weighted quasi-Poisson regression (<code>svyglm</code>, <code>family = quasipoisson</code>) for the raw syndemic score (0–8). The quasi-Poisson family was selected because the score is a bounded integer with mild overdispersion relative to a simple Poisson process (observed variance/mean ratio = 1.23; svyglm dispersion φ = 0.77; diagnostic weighted GLM φ = 1.08). Negative binomial regression was evaluated but yielded an equivalent fit (θ = 22.20), confirming that quasi-Poisson was sufficient. Results are reported as incidence rate ratios (IRR) with 95% confidence intervals <span class="citation" data-cites="hilbe2011negbin gardner1995regression">(<a href="#ref-hilbe2011negbin" role="doc-biblioref">Hilbe 2011</a>; <a href="#ref-gardner1995regression" role="doc-biblioref">Gardner et al. 1995</a>)</span>.</p>
+<p><strong>Sensitivity analysis:</strong> Ordinal proportional-odds logistic regression for low/medium/high burden categories <span class="citation" data-cites="mccullagh1980regression liu2016proportional">(<a href="#ref-mccullagh1980regression" role="doc-biblioref">McCullagh 1980</a>; <a href="#ref-liu2016proportional" role="doc-biblioref">Liu 2016</a>)</span>. The ordinal model provides a complementary perspective using the collapsed categorical outcome; its results are reported in the Supplementary Appendix.</p>
+</section>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<section id="risk-factor-prevalence" class="level3">
+<h3 class="anchored" data-anchor-id="risk-factor-prevalence">Risk Factor Prevalence</h3>
+<p>The chart below displays the percentage of women affected by each individual risk factor, grouped by their functional domain (Healthcare Access, Reproductive Health, and Nutritional).</p>
+<p>The points represent the estimated percentage (prevalence) in the population, while the horizontal lines show the 95% confidence intervals (the range within which we are certain the true value lies). For instance, <strong>Healthcare Access</strong> risks are the most common, with over 60% of women receiving inadequate antenatal care. In contrast, <strong>Nutritional</strong> risks like underweight and stunted height affect approximately 10–12% of the sample.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"figures/figure1_risk_factor_prevalence.jpg"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/figure1_risk_factor_prevalence.jpg" class="img-fluid figure-img"></p>
+<figcaption>Weighted prevalence of individual risk factors across three syndemic domains.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="syndemic-score-distribution" class="level3">
+<h3 class="anchored" data-anchor-id="syndemic-score-distribution">Syndemic Score Distribution</h3>
+<p>The distribution of the total syndemic score reveals the cumulative nature of risk among women in Bangladesh. While 24% of women have no identified risks, the majority (64.6%) experience between one and three concurrent risks.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"figures/figure2_syndemic_distribution.jpg"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/figure2_syndemic_distribution.jpg" class="img-fluid figure-img"></p>
+<figcaption>Distribution of total syndemic score (weighted, n = 11,657).</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="syndemic-burden-categories" class="level3">
+<h3 class="anchored" data-anchor-id="syndemic-burden-categories">Syndemic Burden Categories</h3>
+<p>For descriptive purposes, the syndemic score was collapsed into three ordinal categories representing the level of cumulative burden.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>burden_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/paper_burden_categories.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>burden_data <span class="sc">|&gt;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Burden Level</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">case_when</span>(</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_detect</span>(burden_category, <span class="st">"Low"</span>)    <span class="sc">~</span> <span class="st">"Low Burden"</span>,</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_detect</span>(burden_category, <span class="st">"Medium"</span>) <span class="sc">~</span> <span class="st">"Medium Burden"</span>,</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_detect</span>(burden_category, <span class="st">"High"</span>)   <span class="sc">~</span> <span class="st">"High Burden"</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Score Range</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">case_when</span>(</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_detect</span>(burden_category, <span class="st">"Low"</span>)    <span class="sc">~</span> <span class="st">"0"</span>,</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_detect</span>(burden_category, <span class="st">"Medium"</span>) <span class="sc">~</span> <span class="st">"1–3"</span>,</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_detect</span>(burden_category, <span class="st">"High"</span>)   <span class="sc">~</span> <span class="st">"≥4"</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Unweighted n</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">format</span>(unweighted_n, <span class="at">big.mark =</span> <span class="st">","</span>),</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Weighted Percentage (%)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">sprintf</span>(<span class="st">"%.1f%%"</span>, weighted_percent)</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Classification of women by syndemic burden category (n = 11,657)"</span>,</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">align =</span> <span class="st">"llrr"</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Classification of women by syndemic burden category (n = 11,657)</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Burden Level</th>
+<th style="text-align: left;">Score Range</th>
+<th style="text-align: right;">Unweighted n</th>
+<th style="text-align: right;">Weighted Percentage (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Low Burden</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">2,860</td>
+<td style="text-align: right;">24.0%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Medium Burden</td>
+<td style="text-align: left;">1–3</td>
+<td style="text-align: right;">7,487</td>
+<td style="text-align: right;">64.6%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">High Burden</td>
+<td style="text-align: left;">≥4</td>
+<td style="text-align: right;">1,310</td>
+<td style="text-align: right;">11.4%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="sociodemographic-and-geographic-patterning" class="level3">
+<h3 class="anchored" data-anchor-id="sociodemographic-and-geographic-patterning">Sociodemographic and Geographic Patterning</h3>
+<p>The syndemic burden is strongly patterned by social determinants and geographic location. Mean syndemic scores across key demographic groups reveal significant disparities, particularly by education level and wealth quintile.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"figures/figure4_education_residence.jpg"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/figure4_education_residence.jpg" class="img-fluid figure-img"></p>
+<figcaption>Mean syndemic score by key demographics (95% CI).</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<section id="intersectionality-wealth-and-residence" class="level4">
+<h4 class="anchored" data-anchor-id="intersectionality-wealth-and-residence">Intersectionality: Wealth and Residence</h4>
+<p>The interaction of household wealth and urban-rural residence further identifies the most vulnerable populations. While higher wealth is protective in both settings, rural women in the lowest wealth quintiles experience a disproportionately high cumulative risk burden.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"figures/figure5_intersectionality_wealth_residence.jpg"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/figure5_intersectionality_wealth_residence.jpg" class="img-fluid figure-img"></p>
+<figcaption>Intersectionality of wealth and residence: mean syndemic score (95% CI).</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="geographic-variation" class="level4">
+<h4 class="anchored" data-anchor-id="geographic-variation">Geographic Variation</h4>
+<p>Geographically, the syndemic burden is not uniform across Bangladesh. Divisions such as Sylhet and Mymensingh exhibit higher average scores and a greater prevalence of high-burden cases compared to divisions like Dhaka or Khulna.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/figure6_geographic_map.jpg" class="img-fluid figure-img" alt="Geographic map of syndemic burden variation across Bangladesh by division."></p>
+<figcaption>Geographic distribution of syndemic burden variation across Bangladesh.</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="multivariable-quasi-poisson-regression-primary-model" class="level3">
+<h3 class="anchored" data-anchor-id="multivariable-quasi-poisson-regression-primary-model">Multivariable Quasi-Poisson Regression (Primary Model)</h3>
+<p>Survey-weighted quasi-Poisson regression (φ = 0.77 from the full svyglm model; diagnostic weighted GLM φ = 1.08) was fit for the raw syndemic score. Results are incidence rate ratios (IRR): the multiplicative change in expected syndemic score per unit change in a predictor, holding all other variables constant.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>table3 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/table3_quasipoisson_irr.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>table3 <span class="sc">|&gt;</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">variable_group =</span> <span class="fu">clean_variable_group</span>(variable)) <span class="sc">|&gt;</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">Group    =</span> variable_group,</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">Category =</span> category,</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">Reference =</span> <span class="fu">if_else</span>(<span class="fu">is.na</span>(coefficient), <span class="st">"✓"</span>, <span class="st">""</span>),</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">IRR (95% CI)</span><span class="st">`</span> <span class="ot">=</span> IRR_CI,</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">p-value</span><span class="st">`</span>      <span class="ot">=</span> p_formatted</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Table 3. Survey-weighted quasi-Poisson regression: predictors of syndemic burden score (n = 11,657)"</span>,</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">align   =</span> <span class="st">"llcll"</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Table 3. Survey-weighted quasi-Poisson regression: predictors of syndemic burden score (n = 11,657)</caption>
+<colgroup>
+<col style="width: 24%">
+<col style="width: 34%">
+<col style="width: 12%">
+<col style="width: 19%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Group</th>
+<th style="text-align: left;">Category</th>
+<th style="text-align: center;">Reference</th>
+<th style="text-align: left;">IRR (95% CI)</th>
+<th style="text-align: left;">p-value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Age group</td>
+<td style="text-align: left;">15-24</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: left;">1.00 (reference)</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Age group</td>
+<td style="text-align: left;">25-34</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">1.05 (1.01-1.08)</td>
+<td style="text-align: left;">0.007</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Age group</td>
+<td style="text-align: left;">35-49</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">1.14 (1.09-1.19)</td>
+<td style="text-align: left;">&lt;0.001</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Respondent education</td>
+<td style="text-align: left;">Higher</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: left;">1.00 (reference)</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Respondent education</td>
+<td style="text-align: left;">Secondary</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">1.68 (1.59-1.79)</td>
+<td style="text-align: left;">&lt;0.001</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Respondent education</td>
+<td style="text-align: left;">Primary</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">2.02 (1.88-2.16)</td>
+<td style="text-align: left;">&lt;0.001</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Respondent education</td>
+<td style="text-align: left;">No education</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">2.06 (1.90-2.23)</td>
+<td style="text-align: left;">&lt;0.001</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Wealth quintile</td>
+<td style="text-align: left;">Richest</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: left;">1.00 (reference)</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Wealth quintile</td>
+<td style="text-align: left;">Richer</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">1.16 (1.10-1.23)</td>
+<td style="text-align: left;">&lt;0.001</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Wealth quintile</td>
+<td style="text-align: left;">Middle</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">1.24 (1.17-1.31)</td>
+<td style="text-align: left;">&lt;0.001</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Wealth quintile</td>
+<td style="text-align: left;">Poorer</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">1.27 (1.18-1.36)</td>
+<td style="text-align: left;">&lt;0.001</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Wealth quintile</td>
+<td style="text-align: left;">Poorest</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">1.39 (1.30-1.49)</td>
+<td style="text-align: left;">&lt;0.001</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Residence</td>
+<td style="text-align: left;">Urban</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: left;">1.00 (reference)</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Residence</td>
+<td style="text-align: left;">Rural</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">1.11 (1.06-1.16)</td>
+<td style="text-align: left;">&lt;0.001</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Division</td>
+<td style="text-align: left;">Dhaka</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: left;">1.00 (reference)</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Division</td>
+<td style="text-align: left;">Barishal</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">1.08 (1.00-1.16)</td>
+<td style="text-align: left;">0.043</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Division</td>
+<td style="text-align: left;">Chattogram</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">1.10 (1.02-1.17)</td>
+<td style="text-align: left;">0.008</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Division</td>
+<td style="text-align: left;">Khulna</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">1.02 (0.95-1.10)</td>
+<td style="text-align: left;">0.526</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Division</td>
+<td style="text-align: left;">Mymensingh</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">1.07 (1.01-1.15)</td>
+<td style="text-align: left;">0.033</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Division</td>
+<td style="text-align: left;">Rajshahi</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">1.06 (0.99-1.13)</td>
+<td style="text-align: left;">0.112</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Division</td>
+<td style="text-align: left;">Rangpur</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">1.03 (0.96-1.11)</td>
+<td style="text-align: left;">0.423</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Division</td>
+<td style="text-align: left;">Sylhet</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">1.09 (1.01-1.17)</td>
+<td style="text-align: left;">0.026</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Employment</td>
+<td style="text-align: left;">Not working</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: left;">1.00 (reference)</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Employment</td>
+<td style="text-align: left;">Working</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">0.94 (0.91-0.98)</td>
+<td style="text-align: left;">0.002</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Employment</td>
+<td style="text-align: left;">Not reported / not applicable</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">0.39 (0.34-0.44)</td>
+<td style="text-align: left;">&lt;0.001</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Husband’s education</td>
+<td style="text-align: left;">Higher</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: left;">1.00 (reference)</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Husband’s education</td>
+<td style="text-align: left;">Secondary</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">1.08 (1.01-1.14)</td>
+<td style="text-align: left;">0.015</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Husband’s education</td>
+<td style="text-align: left;">Primary</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">1.14 (1.08-1.22)</td>
+<td style="text-align: left;">&lt;0.001</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Husband’s education</td>
+<td style="text-align: left;">No education</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">1.14 (1.07-1.22)</td>
+<td style="text-align: left;">&lt;0.001</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Husband’s education</td>
+<td style="text-align: left;">Not reported / not applicable</td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">0.89 (0.78-1.02)</td>
+<td style="text-align: left;">0.107</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>forest_data <span class="ot">&lt;-</span> table3 <span class="sc">|&gt;</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(coefficient)) <span class="sc">|&gt;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">variable_group =</span> <span class="fu">clean_variable_group</span>(variable),</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">predictor      =</span> <span class="fu">paste0</span>(variable_group, <span class="st">": "</span>, category),</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">direction      =</span> <span class="fu">if_else</span>(IRR <span class="sc">&lt;</span> <span class="dv">1</span>, <span class="st">"Protective"</span>, <span class="st">"Risk"</span>),</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">predictor      =</span> <span class="fu">factor</span>(predictor, <span class="at">levels =</span> predictor[<span class="fu">order</span>(IRR)])</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(forest_data, <span class="fu">aes</span>(<span class="at">x =</span> IRR, <span class="at">y =</span> predictor, <span class="at">color =</span> direction)) <span class="sc">+</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">1</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"gray45"</span>) <span class="sc">+</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbarh</span>(<span class="fu">aes</span>(<span class="at">xmin =</span> CI_lower, <span class="at">xmax =</span> CI_upper), <span class="at">height =</span> <span class="fl">0.22</span>, <span class="at">linewidth =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="fl">2.8</span>) <span class="sc">+</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>() <span class="sc">+</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Protective"</span> <span class="ot">=</span> <span class="st">"#1b9e77"</span>, <span class="st">"Risk"</span> <span class="ot">=</span> <span class="st">"#d95f02"</span>)) <span class="sc">+</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Incidence Rate Ratio (log scale)"</span>, <span class="at">y =</span> <span class="cn">NULL</span>, <span class="at">color =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: `geom_errorbarh()` was deprecated in ggplot2 4.0.0.
+ℹ Please use the `orientation` argument of `geom_errorbar()` instead.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`height` was translated to `width`.</code></pre>
+</div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="index_files/figure-html/forest-plot-full-model-1.png" class="img-fluid figure-img" width="864"></p>
+<figcaption>Full-model IRRs and 95% confidence intervals from quasi-Poisson regression. IRR &lt; 1 indicates a lower expected syndemic score relative to the reference category.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>The full model revealed strong social gradients. Compared with women with higher education, those with no education had 2.06 times the expected syndemic score (IRR 2.06, 95% CI 1.90–2.23). Rural residence was associated with an 11% higher score (IRR 1.11, 95% CI 1.06–1.16). Women in the poorest wealth quintile had 39% higher scores than the richest (IRR 1.39, 95% CI 1.30–1.49). Working women had modestly lower scores (IRR 0.94, 95% CI 0.91–0.98). Husband’s education showed an independent gradient: no education versus higher (IRR 1.14, 95% CI 1.07–1.22).</p>
+</section>
+<section id="interaction-and-sensitivity-checks" class="level3">
+<h3 class="anchored" data-anchor-id="interaction-and-sensitivity-checks">Interaction and Sensitivity Checks</h3>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>social_interactions <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/paper_social_interaction_tests.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>social_interactions <span class="sc">|&gt;</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">Test         =</span> test,</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">F statistic</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">sprintf</span>(<span class="st">"%.2f"</span>, statistic),</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">p-value</span><span class="st">`</span>    <span class="ot">=</span> p_formatted</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">caption =</span> <span class="st">"Ordinal model interaction tests (education × residence; wealth × residence)"</span>, <span class="at">align =</span> <span class="st">"lrr"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Ordinal model interaction tests (education × residence; wealth × residence)</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Test</th>
+<th style="text-align: right;">F statistic</th>
+<th style="text-align: right;">p-value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Ordinal model: wealth x residence</td>
+<td style="text-align: right;">0.17</td>
+<td style="text-align: right;">0.952</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ordinal model: education x residence</td>
+<td style="text-align: right;">0.59</td>
+<td style="text-align: right;">0.621</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>The interaction tests do not support statistical effect modification by residence for either wealth or education, indicating the evidence is stronger for broad social patterning than for subgroup-specific slopes.</p>
+</section>
+</section>
+<section id="discussion" class="level2">
+<h2 class="anchored" data-anchor-id="discussion">Discussion</h2>
+<section id="principal-findings" class="level3">
+<h3 class="anchored" data-anchor-id="principal-findings">Principal Findings</h3>
+<p>This study found that co-occurring risks are common among women in Bangladesh. Most women had at least one risk, nearly two-thirds were in the medium-burden category, and 11.4% had high burden. Access/autonomy and reproductive-health risks were more common than nutritional risks, but all three domains co-occurred at a rate 23% higher than expected under independence.</p>
+<p>The strongest and most consistent predictors were education and wealth. Women with no education had twice the expected syndemic score relative to women with higher education (IRR 2.06). Rural residence independently increased scores by 11%. Husband’s education remained independently predictive, consistent with a household-level interpretation of social advantage.</p>
+</section>
+<section id="interpretation-in-light-of-prior-evidence" class="level3">
+<h3 class="anchored" data-anchor-id="interpretation-in-light-of-prior-evidence">Interpretation in Light of Prior Evidence</h3>
+<p>The results align with prior Bangladesh studies showing socioeconomic gradients in women’s undernutrition <span class="citation" data-cites="rahman2022undernutrition hossain2023doubleburden">(<a href="#ref-rahman2022undernutrition" role="doc-biblioref">Rahman et al. 2022</a>; <a href="#ref-hossain2023doubleburden" role="doc-biblioref">Hossain et al. 2023</a>)</span>, reproductive timing <span class="citation" data-cites="islam2021childmarriage">(<a href="#ref-islam2021childmarriage" role="doc-biblioref">Islam et al. 2021</a>)</span>, and maternal healthcare utilization <span class="citation" data-cites="yaya2017delivery khan2022continuum haider2017autonomy">(<a href="#ref-yaya2017delivery" role="doc-biblioref">Yaya et al. 2017</a>; <a href="#ref-khan2022continuum" role="doc-biblioref">Khan et al. 2022</a>; <a href="#ref-haider2017autonomy" role="doc-biblioref">Haider et al. 2017</a>)</span>. The contribution here is to show that these risks are not isolated — they cluster across domains and are patterned by the same social determinants.</p>
+<p>The findings also reflect the methodological caution recommended in recent syndemic literature <span class="citation" data-cites="tsai2018syndemics bulled2024guide">(<a href="#ref-tsai2018syndemics" role="doc-biblioref">Tsai 2018</a>; <a href="#ref-bulled2024guide" role="doc-biblioref">Bulled 2024</a>)</span>. The score captures cumulative burden and modest clustering, but true syndemic synergy would require a downstream health outcome independent of the component risks, or longitudinal evidence of interacting pathways. The quasi-Poisson count model was selected as the primary model because it retains the full information in the score distribution, produces directly interpretable IRRs, and appropriately handles the mild overdispersion present in the data.</p>
+</section>
+<section id="policy-implications" class="level3">
+<h3 class="anchored" data-anchor-id="policy-implications">Policy Implications</h3>
+<p>The results point toward integrated interventions rather than single-risk programs. Education, household socioeconomic position, rural service access, ANC coverage, and women’s decision-making autonomy are linked domains. Programs addressing maternal nutrition, reproductive health, and service access together may better match the pattern of co-occurring risk observed in the data.</p>
+</section>
+<section id="strengths-and-limitations" class="level3">
+<h3 class="anchored" data-anchor-id="strengths-and-limitations">Strengths and Limitations</h3>
+<p>Strengths include nationally representative BDHS 2022 data, survey-weighted estimation throughout, a clearly defined multidomain burden score, explicit clustering checks, a primary count model with sensitivity analysis, and transparent reporting of model diagnostics.</p>
+<p>Limitations are important. The cross-sectional design prevents causal inference. Several indicators are subgroup-specific or missing for subsets of women, so the score is based on available indicators rather than complete observation of all nine risks. The analysis tests clustering and social patterning more directly than biological or causal synergy.</p>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>BDHS 2022 evidence shows that nutritional, reproductive-health, and healthcare-access/autonomy risks cluster among Bangladeshi women and are strongly socially patterned. The most defensible interpretation is a cumulative syndemic-burden framework: the burden is multidomain, socially structured, and policy-relevant, but claims of causal synergy should remain cautious until tested with longitudinal data or independent downstream health outcomes.</p>
+</section>
+<section id="supplementary-appendix" class="level2">
+<h2 class="anchored" data-anchor-id="supplementary-appendix">Supplementary Appendix</h2>
+<section id="s1.-sample-characteristics" class="level3">
+<h3 class="anchored" data-anchor-id="s1.-sample-characteristics">S1. Sample Characteristics</h3>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>table1 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/table1_sample_characteristics.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>table1 <span class="sc">|&gt;</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Table 1. Sample characteristics (n = 11,657 women with recent births, BDHS 2022)"</span>,</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">align =</span> <span class="st">"lrr"</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Table 1. Sample characteristics (n = 11,657 women with recent births, BDHS 2022)</caption>
+<colgroup>
+<col style="width: 15%">
+<col style="width: 11%">
+<col style="width: 5%">
+<col style="width: 14%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 14%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">variable</th>
+<th style="text-align: right;">category</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: left;">weighted_percent</th>
+<th style="text-align: right;">ci_lower</th>
+<th style="text-align: right;">ci_upper</th>
+<th style="text-align: left;">percent_ci</th>
+<th style="text-align: right;">variable_label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">age</td>
+<td style="text-align: right;">Mean (years)</td>
+<td style="text-align: right;">11657</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: left;">26.7 (26.6–26.9)</td>
+<td style="text-align: right;">Age (years)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">age_group</td>
+<td style="text-align: right;">15–24</td>
+<td style="text-align: right;">4552</td>
+<td style="text-align: left;">40.023328</td>
+<td style="text-align: right;">38.930093</td>
+<td style="text-align: right;">41.116563</td>
+<td style="text-align: left;">40.0 (38.9–41.1)</td>
+<td style="text-align: right;">Age group</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">age_group</td>
+<td style="text-align: right;">25–34</td>
+<td style="text-align: right;">5686</td>
+<td style="text-align: left;">48.057783</td>
+<td style="text-align: right;">46.989222</td>
+<td style="text-align: right;">49.126343</td>
+<td style="text-align: left;">48.1 (47.0–49.1)</td>
+<td style="text-align: right;">Age group</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">age_group</td>
+<td style="text-align: right;">35–49</td>
+<td style="text-align: right;">1419</td>
+<td style="text-align: left;">11.918889</td>
+<td style="text-align: right;">11.199661</td>
+<td style="text-align: right;">12.638117</td>
+<td style="text-align: left;">11.9 (11.2–12.6)</td>
+<td style="text-align: right;">Age group</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">education</td>
+<td style="text-align: right;">No</td>
+<td style="text-align: right;">707</td>
+<td style="text-align: left;">6.068668</td>
+<td style="text-align: right;">5.333091</td>
+<td style="text-align: right;">6.804246</td>
+<td style="text-align: left;">6.1 (5.3–6.8)</td>
+<td style="text-align: right;">Education level</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">education</td>
+<td style="text-align: right;">Primary</td>
+<td style="text-align: right;">2690</td>
+<td style="text-align: left;">22.692787</td>
+<td style="text-align: right;">21.503959</td>
+<td style="text-align: right;">23.881615</td>
+<td style="text-align: left;">22.7 (21.5–23.9)</td>
+<td style="text-align: right;">Education level</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">education</td>
+<td style="text-align: right;">Secondary</td>
+<td style="text-align: right;">6075</td>
+<td style="text-align: left;">53.624782</td>
+<td style="text-align: right;">52.296227</td>
+<td style="text-align: right;">54.953338</td>
+<td style="text-align: left;">53.6 (52.3–55.0)</td>
+<td style="text-align: right;">Education level</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">education</td>
+<td style="text-align: right;">Higher</td>
+<td style="text-align: right;">2185</td>
+<td style="text-align: left;">17.613762</td>
+<td style="text-align: right;">16.356178</td>
+<td style="text-align: right;">18.871347</td>
+<td style="text-align: left;">17.6 (16.4–18.9)</td>
+<td style="text-align: right;">Education level</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">wealth</td>
+<td style="text-align: right;">Poorest</td>
+<td style="text-align: right;">2467</td>
+<td style="text-align: left;">20.839595</td>
+<td style="text-align: right;">19.386835</td>
+<td style="text-align: right;">22.292355</td>
+<td style="text-align: left;">20.8 (19.4–22.3)</td>
+<td style="text-align: right;">Wealth quintile</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">wealth</td>
+<td style="text-align: right;">Poorer</td>
+<td style="text-align: right;">2300</td>
+<td style="text-align: left;">20.240692</td>
+<td style="text-align: right;">19.084560</td>
+<td style="text-align: right;">21.396824</td>
+<td style="text-align: left;">20.2 (19.1–21.4)</td>
+<td style="text-align: right;">Wealth quintile</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">wealth</td>
+<td style="text-align: right;">Middle</td>
+<td style="text-align: right;">2283</td>
+<td style="text-align: left;">20.255083</td>
+<td style="text-align: right;">19.088045</td>
+<td style="text-align: right;">21.422121</td>
+<td style="text-align: left;">20.3 (19.1–21.4)</td>
+<td style="text-align: right;">Wealth quintile</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">wealth</td>
+<td style="text-align: right;">Richer</td>
+<td style="text-align: right;">2281</td>
+<td style="text-align: left;">19.599175</td>
+<td style="text-align: right;">18.339607</td>
+<td style="text-align: right;">20.858744</td>
+<td style="text-align: left;">19.6 (18.3–20.9)</td>
+<td style="text-align: right;">Wealth quintile</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">wealth</td>
+<td style="text-align: right;">Richest</td>
+<td style="text-align: right;">2326</td>
+<td style="text-align: left;">19.065455</td>
+<td style="text-align: right;">17.292520</td>
+<td style="text-align: right;">20.838390</td>
+<td style="text-align: left;">19.1 (17.3–20.8)</td>
+<td style="text-align: right;">Wealth quintile</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">residence</td>
+<td style="text-align: right;">Urban</td>
+<td style="text-align: right;">3950</td>
+<td style="text-align: left;">27.770917</td>
+<td style="text-align: right;">26.303769</td>
+<td style="text-align: right;">29.238065</td>
+<td style="text-align: left;">27.8 (26.3–29.2)</td>
+<td style="text-align: right;">Residence type</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">residence</td>
+<td style="text-align: right;">Rural</td>
+<td style="text-align: right;">7707</td>
+<td style="text-align: left;">72.229083</td>
+<td style="text-align: right;">70.761935</td>
+<td style="text-align: right;">73.696231</td>
+<td style="text-align: left;">72.2 (70.8–73.7)</td>
+<td style="text-align: right;">Residence type</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">division</td>
+<td style="text-align: right;">Barishal</td>
+<td style="text-align: right;">1311</td>
+<td style="text-align: left;">6.440109</td>
+<td style="text-align: right;">5.886354</td>
+<td style="text-align: right;">6.993864</td>
+<td style="text-align: left;">6.4 (5.9–7.0)</td>
+<td style="text-align: right;">Administrative division</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">division</td>
+<td style="text-align: right;">Chattogram</td>
+<td style="text-align: right;">1932</td>
+<td style="text-align: left;">20.898781</td>
+<td style="text-align: right;">19.343053</td>
+<td style="text-align: right;">22.454508</td>
+<td style="text-align: left;">20.9 (19.3–22.5)</td>
+<td style="text-align: right;">Administrative division</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">division</td>
+<td style="text-align: right;">Dhaka</td>
+<td style="text-align: right;">1793</td>
+<td style="text-align: left;">25.548923</td>
+<td style="text-align: right;">24.152996</td>
+<td style="text-align: right;">26.944850</td>
+<td style="text-align: left;">25.5 (24.2–26.9)</td>
+<td style="text-align: right;">Administrative division</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">division</td>
+<td style="text-align: right;">Khulna</td>
+<td style="text-align: right;">1333</td>
+<td style="text-align: left;">10.460425</td>
+<td style="text-align: right;">9.760769</td>
+<td style="text-align: right;">11.160082</td>
+<td style="text-align: left;">10.5 (9.8–11.2)</td>
+<td style="text-align: right;">Administrative division</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">division</td>
+<td style="text-align: right;">Mymensingh</td>
+<td style="text-align: right;">1353</td>
+<td style="text-align: left;">8.236174</td>
+<td style="text-align: right;">7.699554</td>
+<td style="text-align: right;">8.772794</td>
+<td style="text-align: left;">8.2 (7.7–8.8)</td>
+<td style="text-align: right;">Administrative division</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">division</td>
+<td style="text-align: right;">Rajshahi</td>
+<td style="text-align: right;">1218</td>
+<td style="text-align: left;">10.757006</td>
+<td style="text-align: right;">9.787137</td>
+<td style="text-align: right;">11.726875</td>
+<td style="text-align: left;">10.8 (9.8–11.7)</td>
+<td style="text-align: right;">Administrative division</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">division</td>
+<td style="text-align: right;">Rangpur</td>
+<td style="text-align: right;">1382</td>
+<td style="text-align: left;">11.343060</td>
+<td style="text-align: right;">10.598741</td>
+<td style="text-align: right;">12.087379</td>
+<td style="text-align: left;">11.3 (10.6–12.1)</td>
+<td style="text-align: right;">Administrative division</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">division</td>
+<td style="text-align: right;">Sylhet</td>
+<td style="text-align: right;">1335</td>
+<td style="text-align: left;">6.315522</td>
+<td style="text-align: right;">5.901995</td>
+<td style="text-align: right;">6.729049</td>
+<td style="text-align: left;">6.3 (5.9–6.7)</td>
+<td style="text-align: right;">Administrative division</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">employment</td>
+<td style="text-align: right;">Not working</td>
+<td style="text-align: right;">5786</td>
+<td style="text-align: left;">73.622731</td>
+<td style="text-align: right;">72.060112</td>
+<td style="text-align: right;">75.185349</td>
+<td style="text-align: left;">73.6 (72.1–75.2)</td>
+<td style="text-align: right;">Employment status</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">employment</td>
+<td style="text-align: right;">Working</td>
+<td style="text-align: right;">1966</td>
+<td style="text-align: left;">26.377269</td>
+<td style="text-align: right;">24.814651</td>
+<td style="text-align: right;">27.939888</td>
+<td style="text-align: left;">26.4 (24.8–27.9)</td>
+<td style="text-align: right;">Employment status</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">husband_education</td>
+<td style="text-align: right;">No education</td>
+<td style="text-align: right;">1171</td>
+<td style="text-align: left;">15.524582</td>
+<td style="text-align: right;">14.322285</td>
+<td style="text-align: right;">16.726880</td>
+<td style="text-align: left;">15.5 (14.3–16.7)</td>
+<td style="text-align: right;">Husband’s education</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">husband_education</td>
+<td style="text-align: right;">Primary</td>
+<td style="text-align: right;">2302</td>
+<td style="text-align: left;">30.049254</td>
+<td style="text-align: right;">28.573087</td>
+<td style="text-align: right;">31.525422</td>
+<td style="text-align: left;">30.0 (28.6–31.5)</td>
+<td style="text-align: right;">Husband’s education</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">husband_education</td>
+<td style="text-align: right;">Secondary</td>
+<td style="text-align: right;">2626</td>
+<td style="text-align: left;">35.256231</td>
+<td style="text-align: right;">33.803964</td>
+<td style="text-align: right;">36.708498</td>
+<td style="text-align: left;">35.3 (33.8–36.7)</td>
+<td style="text-align: right;">Husband’s education</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">husband_education</td>
+<td style="text-align: right;">Higher</td>
+<td style="text-align: right;">1527</td>
+<td style="text-align: left;">19.169932</td>
+<td style="text-align: right;">17.645750</td>
+<td style="text-align: right;">20.694114</td>
+<td style="text-align: left;">19.2 (17.6–20.7)</td>
+<td style="text-align: right;">Husband’s education</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="s2.-domain-co-occurrence-and-clustering" class="level3">
+<h3 class="anchored" data-anchor-id="s2.-domain-co-occurrence-and-clustering">S2. Domain Co-occurrence and Clustering</h3>
+<p>Evidence for the clustering of risk indicators and functional domains was assessed via a correlation matrix and an observed-versus-expected (O/E) analysis.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"figures/figure3_correlation_heatmap.jpg"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/figure3_correlation_heatmap.jpg" class="img-fluid figure-img"></p>
+<figcaption>Pairwise correlation matrix of nine risk indicators.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>domain_oe <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/paper_domain_observed_expected.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>domain_oe <span class="sc">|&gt;</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Domain combination</span><span class="st">`</span>     <span class="ot">=</span> clustering_test,</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Observed %</span><span class="st">`</span>             <span class="ot">=</span> <span class="fu">sprintf</span>(<span class="st">"%.1f"</span>, observed_pct),</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Expected % (independence)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">sprintf</span>(<span class="st">"%.1f"</span>, expected_pct_under_independence),</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">O/E ratio</span><span class="st">`</span>              <span class="ot">=</span> <span class="fu">sprintf</span>(<span class="st">"%.2f"</span>, observed_expected_ratio),</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">95% CI (observed)</span><span class="st">`</span>      <span class="ot">=</span> <span class="fu">sprintf</span>(<span class="st">"%.1f–%.1f"</span>, ci_lower_pct, ci_upper_pct)</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Observed versus expected co-occurrence of risk domains under independence"</span>,</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">align =</span> <span class="st">"lrrrr"</span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Observed versus expected co-occurrence of risk domains under independence</caption>
+<colgroup>
+<col style="width: 32%">
+<col style="width: 11%">
+<col style="width: 27%">
+<col style="width: 10%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Domain combination</th>
+<th style="text-align: right;">Observed %</th>
+<th style="text-align: right;">Expected % (independence)</th>
+<th style="text-align: right;">O/E ratio</th>
+<th style="text-align: right;">95% CI (observed)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Nutrition + reproductive</td>
+<td style="text-align: right;">13.7</td>
+<td style="text-align: right;">12.5</td>
+<td style="text-align: right;">1.10</td>
+<td style="text-align: right;">12.5–15.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Nutrition + access/autonomy</td>
+<td style="text-align: right;">16.9</td>
+<td style="text-align: right;">15.3</td>
+<td style="text-align: right;">1.10</td>
+<td style="text-align: right;">15.5–18.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Reproductive + access/autonomy</td>
+<td style="text-align: right;">47.2</td>
+<td style="text-align: right;">44.8</td>
+<td style="text-align: right;">1.05</td>
+<td style="text-align: right;">45.1–49.2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">All three domains</td>
+<td style="text-align: right;">11.4</td>
+<td style="text-align: right;">9.3</td>
+<td style="text-align: right;">1.23</td>
+<td style="text-align: right;">10.2–12.6</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>All three risk domains co-occurred at a rate 1.23 times higher than expected under the independence assumption, providing evidence of clustering across nutritional, reproductive-health, and access/autonomy domains.</p>
+</section>
+<section id="s3.-model-diagnostics" class="level3">
+<h3 class="anchored" data-anchor-id="s3.-model-diagnostics">S3. Model Diagnostics</h3>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>diag <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/quasipoisson_model_diagnostics.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>diag <span class="sc">|&gt;</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">Metric =</span> metric,</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">Value  =</span> <span class="fu">as.character</span>(<span class="fu">round</span>(<span class="fu">as.numeric</span>(value), <span class="dv">4</span>)),</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">Note   =</span> note</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">caption =</span> <span class="st">"S3. Quasi-Poisson model diagnostics"</span>, <span class="at">align =</span> <span class="st">"lll"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>S3. Quasi-Poisson model diagnostics</caption>
+<colgroup>
+<col style="width: 25%">
+<col style="width: 4%">
+<col style="width: 69%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Metric</th>
+<th style="text-align: left;">Value</th>
+<th style="text-align: left;">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">n_complete</td>
+<td style="text-align: left;">11657</td>
+<td style="text-align: left;">Complete cases after recoding blank employment and husband education.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">syndemic_score_min</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">Integer count check.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">syndemic_score_max</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">Observed maximum; theoretical maximum is 9.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">raw_mean</td>
+<td style="text-align: left;">1.6322</td>
+<td style="text-align: left;">Unweighted mean.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">raw_variance</td>
+<td style="text-align: left;">2.0081</td>
+<td style="text-align: left;">Unweighted variance.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">raw_variance_mean_ratio</td>
+<td style="text-align: left;">1.2304</td>
+<td style="text-align: left;">Unweighted variance divided by unweighted mean.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">svyglm_quasipoisson_phi</td>
+<td style="text-align: left;">0.7699</td>
+<td style="text-align: left;">Final design-based quasi-Poisson dispersion from svyglm full model.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">diagnostic_weighted_glm_quasipoisson_phi</td>
+<td style="text-align: left;">1.0843</td>
+<td style="text-align: left;">Comparable exploratory weighted GLM dispersion from the age, education, wealth, and residence diagnostic model.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">observed_zero_percent</td>
+<td style="text-align: left;">24.0144</td>
+<td style="text-align: left;">Survey-weighted percentage with syndemic_score == 0.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">poisson_expected_zero_percent</td>
+<td style="text-align: left;">27.0694</td>
+<td style="text-align: left;">Survey-weighted expected zero percentage from Poisson svyglm.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">negative_binomial_expected_zero_percent</td>
+<td style="text-align: left;">22.8828</td>
+<td style="text-align: left;">Weighted expected zero percentage from diagnostic NB model.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">negative_binomial_theta</td>
+<td style="text-align: left;">22.5791</td>
+<td style="text-align: left;">Negative binomial diagnostic used a simpler model because full survey NB is not available in svyglm.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="s4.-ordinal-sensitivity-analysis-full-results" class="level3">
+<h3 class="anchored" data-anchor-id="s4.-ordinal-sensitivity-analysis-full-results">S4. Ordinal Sensitivity Analysis — Full Results</h3>
+<p>The ordinal proportional-odds model uses the same predictors and the same burden categories (Low 0 / Medium 1–3 / High ≥4) as the primary analysis. Results are odds ratios (OR) for being in a higher burden category, with <strong>no education</strong>, <strong>poorest wealth quintile</strong>, <strong>urban residence</strong>, and <strong>Barishal division</strong> as reference categories. The ordinal model is supplementary; its role is to confirm the direction and significance of predictors found in the primary quasi-Poisson model.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>ordinal_sens <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/paper_ordinal_sensitivity_results.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>ordinal_sens <span class="sc">|&gt;</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">Group =</span> <span class="fu">case_when</span>(</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_starts</span>(term, <span class="st">"husband_education"</span>) <span class="sc">~</span> <span class="st">"Husband's education"</span>,</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_starts</span>(term, <span class="st">"age_group"</span>)         <span class="sc">~</span> <span class="st">"Age group"</span>,</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_starts</span>(term, <span class="st">"education"</span>)         <span class="sc">~</span> <span class="st">"Respondent education"</span>,</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_starts</span>(term, <span class="st">"wealth"</span>)            <span class="sc">~</span> <span class="st">"Wealth quintile"</span>,</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_starts</span>(term, <span class="st">"residence"</span>)         <span class="sc">~</span> <span class="st">"Residence"</span>,</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_starts</span>(term, <span class="st">"division"</span>)          <span class="sc">~</span> <span class="st">"Division"</span>,</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_starts</span>(term, <span class="st">"employment"</span>)        <span class="sc">~</span> <span class="st">"Employment"</span>,</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>      <span class="cn">TRUE</span>                                  <span class="sc">~</span> term</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">Category =</span> <span class="fu">case_when</span>(</span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_starts</span>(term, <span class="st">"husband_education"</span>) <span class="sc">~</span> <span class="fu">str_remove</span>(term, <span class="st">"husband_education"</span>),</span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_starts</span>(term, <span class="st">"age_group"</span>)         <span class="sc">~</span> <span class="fu">str_remove</span>(term, <span class="st">"age_group"</span>),</span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_starts</span>(term, <span class="st">"education"</span>)         <span class="sc">~</span> <span class="fu">str_remove</span>(term, <span class="st">"education"</span>),</span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_starts</span>(term, <span class="st">"wealth"</span>)            <span class="sc">~</span> <span class="fu">str_remove</span>(term, <span class="st">"wealth"</span>),</span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_starts</span>(term, <span class="st">"residence"</span>)         <span class="sc">~</span> <span class="fu">str_remove</span>(term, <span class="st">"residence"</span>),</span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_starts</span>(term, <span class="st">"division"</span>)          <span class="sc">~</span> <span class="fu">str_remove</span>(term, <span class="st">"division"</span>),</span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_starts</span>(term, <span class="st">"employment"</span>)        <span class="sc">~</span> <span class="fu">str_remove</span>(term, <span class="st">"employment"</span>),</span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a>      <span class="cn">TRUE</span>                                  <span class="sc">~</span> term</span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(</span>
+<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a>    Group,</span>
+<span id="cb17-28"><a href="#cb17-28" aria-hidden="true" tabindex="-1"></a>    Category,</span>
+<span id="cb17-29"><a href="#cb17-29" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">OR (95% CI)</span><span class="st">`</span> <span class="ot">=</span> OR_CI,</span>
+<span id="cb17-30"><a href="#cb17-30" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">p-value</span><span class="st">`</span>     <span class="ot">=</span> p_formatted</span>
+<span id="cb17-31"><a href="#cb17-31" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb17-32"><a href="#cb17-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">caption =</span> <span class="st">"S4. Ordinal logistic sensitivity analysis: odds ratios for elevated syndemic burden"</span>, <span class="at">align =</span> <span class="st">"llll"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>S4. Ordinal logistic sensitivity analysis: odds ratios for elevated syndemic burden</caption>
+<colgroup>
+<col style="width: 34%">
+<col style="width: 34%">
+<col style="width: 20%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Group</th>
+<th style="text-align: left;">Category</th>
+<th style="text-align: left;">OR (95% CI)</th>
+<th style="text-align: left;">p-value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Age group</td>
+<td style="text-align: left;">25-34</td>
+<td style="text-align: left;">0.99 (0.87-1.14)</td>
+<td style="text-align: left;">0.936</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Age group</td>
+<td style="text-align: left;">35-49</td>
+<td style="text-align: left;">1.13 (0.94-1.34)</td>
+<td style="text-align: left;">0.191</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Respondent education</td>
+<td style="text-align: left;">Primary</td>
+<td style="text-align: left;">0.88 (0.69-1.11)</td>
+<td style="text-align: left;">0.288</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Respondent education</td>
+<td style="text-align: left;">Secondary</td>
+<td style="text-align: left;">0.53 (0.41-0.68)</td>
+<td style="text-align: left;">&lt;0.001</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Respondent education</td>
+<td style="text-align: left;">Higher</td>
+<td style="text-align: left;">0.22 (0.16-0.30)</td>
+<td style="text-align: left;">&lt;0.001</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Wealth quintile</td>
+<td style="text-align: left;">Poorer</td>
+<td style="text-align: left;">0.77 (0.64-0.92)</td>
+<td style="text-align: left;">0.005</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Wealth quintile</td>
+<td style="text-align: left;">Middle</td>
+<td style="text-align: left;">0.69 (0.57-0.84)</td>
+<td style="text-align: left;">&lt;0.001</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Wealth quintile</td>
+<td style="text-align: left;">Richer</td>
+<td style="text-align: left;">0.60 (0.49-0.73)</td>
+<td style="text-align: left;">&lt;0.001</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Wealth quintile</td>
+<td style="text-align: left;">Richest</td>
+<td style="text-align: left;">0.40 (0.31-0.51)</td>
+<td style="text-align: left;">&lt;0.001</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Residence</td>
+<td style="text-align: left;">Rural</td>
+<td style="text-align: left;">1.37 (1.17-1.59)</td>
+<td style="text-align: left;">&lt;0.001</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Division</td>
+<td style="text-align: left;">Chattogram</td>
+<td style="text-align: left;">1.10 (0.80-1.50)</td>
+<td style="text-align: left;">0.560</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Division</td>
+<td style="text-align: left;">Dhaka</td>
+<td style="text-align: left;">0.74 (0.57-0.95)</td>
+<td style="text-align: left;">0.019</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Division</td>
+<td style="text-align: left;">Khulna</td>
+<td style="text-align: left;">0.81 (0.60-1.08)</td>
+<td style="text-align: left;">0.150</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Division</td>
+<td style="text-align: left;">Mymensingh</td>
+<td style="text-align: left;">0.95 (0.72-1.25)</td>
+<td style="text-align: left;">0.709</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Division</td>
+<td style="text-align: left;">Rajshahi</td>
+<td style="text-align: left;">0.94 (0.71-1.25)</td>
+<td style="text-align: left;">0.678</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Division</td>
+<td style="text-align: left;">Rangpur</td>
+<td style="text-align: left;">0.81 (0.61-1.08)</td>
+<td style="text-align: left;">0.147</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Division</td>
+<td style="text-align: left;">Sylhet</td>
+<td style="text-align: left;">1.14 (0.85-1.54)</td>
+<td style="text-align: left;">0.379</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Employment</td>
+<td style="text-align: left;">Working</td>
+<td style="text-align: left;">0.81 (0.72-0.92)</td>
+<td style="text-align: left;">&lt;0.001</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Husband’s education</td>
+<td style="text-align: left;">Primary</td>
+<td style="text-align: left;">0.88 (0.73-1.07)</td>
+<td style="text-align: left;">0.199</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Husband’s education</td>
+<td style="text-align: left;">Secondary</td>
+<td style="text-align: left;">0.72 (0.59-0.88)</td>
+<td style="text-align: left;">0.001</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Husband’s education</td>
+<td style="text-align: left;">Higher</td>
+<td style="text-align: left;">0.52 (0.40-0.67)</td>
+<td style="text-align: left;">&lt;0.001</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Low (0)|Medium (1-3)</td>
+<td style="text-align: left;">Low (0)|Medium (1-3)</td>
+<td style="text-align: left;">0.03 (0.02-0.04)</td>
+<td style="text-align: left;">&lt;0.001</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Medium (1-3)|High (&gt;=4)</td>
+<td style="text-align: left;">Medium (1-3)|High (&gt;=4)</td>
+<td style="text-align: left;">1.73 (1.23-2.45)</td>
+<td style="text-align: left;">0.002</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="s5.-missingness-summary" class="level3">
+<h3 class="anchored" data-anchor-id="s5.-missingness-summary">S5. Missingness Summary</h3>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>missingness <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/paper_missingness_summary.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>missingness <span class="sc">|&gt;</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">Variable        =</span> variable,</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Total N</span><span class="st">`</span>       <span class="ot">=</span> <span class="fu">format</span>(n_total, <span class="at">big.mark =</span> <span class="st">","</span>),</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Missing</span><span class="st">`</span>       <span class="ot">=</span> <span class="fu">format</span>(n_missing, <span class="at">big.mark =</span> <span class="st">","</span>),</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Non-missing</span><span class="st">`</span>   <span class="ot">=</span> <span class="fu">format</span>(n_nonmissing, <span class="at">big.mark =</span> <span class="st">","</span>),</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Missing %</span><span class="st">`</span>     <span class="ot">=</span> <span class="fu">pct1</span>(missing_percent)</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">caption =</span> <span class="st">"S5. Missingness summary for risk indicators and model covariates"</span>, <span class="at">align =</span> <span class="st">"lrrrr"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>S5. Missingness summary for risk indicators and model covariates</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Variable</th>
+<th style="text-align: right;">Total N</th>
+<th style="text-align: right;">Missing</th>
+<th style="text-align: right;">Non-missing</th>
+<th style="text-align: right;">Missing %</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">underweight</td>
+<td style="text-align: right;">11,657</td>
+<td style="text-align: right;">7,776</td>
+<td style="text-align: right;">3,881</td>
+<td style="text-align: right;">66.7%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">stunted_height</td>
+<td style="text-align: right;">11,657</td>
+<td style="text-align: right;">7,777</td>
+<td style="text-align: right;">3,880</td>
+<td style="text-align: right;">66.7%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">high_parity</td>
+<td style="text-align: right;">11,657</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">11,657</td>
+<td style="text-align: right;">0.0%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">adolescent_birth</td>
+<td style="text-align: right;">11,657</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">11,657</td>
+<td style="text-align: right;">0.0%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">short_interval</td>
+<td style="text-align: right;">11,657</td>
+<td style="text-align: right;">4,182</td>
+<td style="text-align: right;">7,475</td>
+<td style="text-align: right;">35.9%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">home_delivery</td>
+<td style="text-align: right;">11,657</td>
+<td style="text-align: right;">6,672</td>
+<td style="text-align: right;">4,985</td>
+<td style="text-align: right;">57.2%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">distance_problem</td>
+<td style="text-align: right;">11,657</td>
+<td style="text-align: right;">3,905</td>
+<td style="text-align: right;">7,752</td>
+<td style="text-align: right;">33.5%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">low_autonomy</td>
+<td style="text-align: right;">11,657</td>
+<td style="text-align: right;">4,017</td>
+<td style="text-align: right;">7,640</td>
+<td style="text-align: right;">34.5%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">inadequate_anc</td>
+<td style="text-align: right;">11,657</td>
+<td style="text-align: right;">6,673</td>
+<td style="text-align: right;">4,984</td>
+<td style="text-align: right;">57.2%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">syndemic_score</td>
+<td style="text-align: right;">11,657</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">11,657</td>
+<td style="text-align: right;">0.0%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">syndemic_tertile</td>
+<td style="text-align: right;">11,657</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">11,657</td>
+<td style="text-align: right;">0.0%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">age_group</td>
+<td style="text-align: right;">11,657</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">11,657</td>
+<td style="text-align: right;">0.0%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">education</td>
+<td style="text-align: right;">11,657</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">11,657</td>
+<td style="text-align: right;">0.0%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">wealth</td>
+<td style="text-align: right;">11,657</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">11,657</td>
+<td style="text-align: right;">0.0%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">residence</td>
+<td style="text-align: right;">11,657</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">11,657</td>
+<td style="text-align: right;">0.0%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">division</td>
+<td style="text-align: right;">11,657</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">11,657</td>
+<td style="text-align: right;">0.0%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">employment</td>
+<td style="text-align: right;">11,657</td>
+<td style="text-align: right;">3,905</td>
+<td style="text-align: right;">7,752</td>
+<td style="text-align: right;">33.5%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">husband_education</td>
+<td style="text-align: right;">11,657</td>
+<td style="text-align: right;">4,031</td>
+<td style="text-align: right;">7,626</td>
+<td style="text-align: right;">34.6%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="s6.-available-indicator-vs-complete-case-score-sensitivity" class="level3">
+<h3 class="anchored" data-anchor-id="s6.-available-indicator-vs-complete-case-score-sensitivity">S6. Available-Indicator vs Complete-Case Score Sensitivity</h3>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>complete_case <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/paper_complete_case_sensitivity.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>complete_case <span class="sc">|&gt;</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">Analysis             =</span> analysis,</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Burden category</span><span class="st">`</span>    <span class="ot">=</span> category,</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Weighted n</span><span class="st">`</span>         <span class="ot">=</span> <span class="fu">format</span>(<span class="fu">round</span>(weighted_n), <span class="at">big.mark =</span> <span class="st">","</span>),</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Weighted %</span><span class="st">`</span>         <span class="ot">=</span> <span class="fu">pct1</span>(weighted_percent)</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">caption =</span> <span class="st">"S6. Available-indicator vs complete 9-indicator burden distribution"</span>, <span class="at">align =</span> <span class="st">"llrr"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>S6. Available-indicator vs complete 9-indicator burden distribution</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Analysis</th>
+<th style="text-align: left;">Burden category</th>
+<th style="text-align: right;">Weighted n</th>
+<th style="text-align: right;">Weighted %</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Available-indicator score</td>
+<td style="text-align: left;">Low (0)</td>
+<td style="text-align: right;">2,817</td>
+<td style="text-align: right;">24.0%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Available-indicator score</td>
+<td style="text-align: left;">Medium (1-3)</td>
+<td style="text-align: right;">7,571</td>
+<td style="text-align: right;">64.6%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Available-indicator score</td>
+<td style="text-align: left;">High (&gt;=4)</td>
+<td style="text-align: right;">1,341</td>
+<td style="text-align: right;">11.4%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Complete 9-indicator score</td>
+<td style="text-align: left;">Low (0)</td>
+<td style="text-align: right;">88</td>
+<td style="text-align: right;">5.7%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Complete 9-indicator score</td>
+<td style="text-align: left;">Medium (1-3)</td>
+<td style="text-align: right;">921</td>
+<td style="text-align: right;">59.6%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Complete 9-indicator score</td>
+<td style="text-align: left;">High (&gt;=4)</td>
+<td style="text-align: right;">537</td>
+<td style="text-align: right;">34.7%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="s7.-very-high-burden-by-division-score-6" class="level3">
+<h3 class="anchored" data-anchor-id="s7.-very-high-burden-by-division-score-6">S7. Very High Burden by Division (score ≥6)</h3>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>very_high_division <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/paper_division_very_high_ge6.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>very_high_division <span class="sc">|&gt;</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">Division =</span> division,</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Very high burden, score ≥6</span><span class="st">`</span> <span class="ot">=</span> prev_ci</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">caption =</span> <span class="st">"S7. Very high syndemic burden (score ≥6) by division"</span>, <span class="at">align =</span> <span class="st">"ll"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>S7. Very high syndemic burden (score ≥6) by division</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Division</th>
+<th style="text-align: left;">Very high burden, score ≥6</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Sylhet</td>
+<td style="text-align: left;">2.4% (1.5-3.2)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Mymensingh</td>
+<td style="text-align: left;">1.8% (1.0-2.6)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Rajshahi</td>
+<td style="text-align: left;">1.2% (0.3-2.0)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Chattogram</td>
+<td style="text-align: left;">1.1% (0.5-1.7)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Rangpur</td>
+<td style="text-align: left;">1.0% (0.4-1.6)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Barishal</td>
+<td style="text-align: left;">0.9% (0.3-1.6)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Khulna</td>
+<td style="text-align: left;">0.4% (0.0-0.7)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Dhaka</td>
+<td style="text-align: left;">0.3% (0.0-0.5)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
@@ -313,8 +2000,14 @@ Bulled, Nicola. 2024. <span>“Recommendations for Empirical Syndemics Analyses:
 <div id="ref-chakraborty2003maternal" class="csl-entry" role="listitem">
 Chakraborty, Nitai, M. Atahar Islam, Rafiqul Islam Chowdhury, Wasimul Bari, and H. H. Akhter. 2003. <span>“Determinants of the Use of Maternal Health Services in Rural Bangladesh.”</span> <em>Health Promotion International</em> 18 (4): 327–37. <a href="https://doi.org/10.1093/heapro/dag414">https://doi.org/10.1093/heapro/dag414</a>.
 </div>
+<div id="ref-gardner1995regression" class="csl-entry" role="listitem">
+Gardner, William, Edward P. Mulvey, and Esther C. Shaw. 1995. <span>“Regression Analyses of Counts and Rates: Poisson, Overdispersed Poisson, and Negative Binomial Models.”</span> <em>Psychological Bulletin</em> 118 (3): 392–404. <a href="https://doi.org/10.1037/0033-2909.118.3.392">https://doi.org/10.1037/0033-2909.118.3.392</a>.
+</div>
 <div id="ref-haider2017autonomy" class="csl-entry" role="listitem">
 Haider, Mohammad Rifat, Zaina P. Qureshi, and M. Mahmud Khan. 2017. <span>“Effects of Women’s Autonomy on Maternal Healthcare Utilization in Bangladesh: Evidence from a National Survey.”</span> <em>Sexual &amp; Reproductive Healthcare</em> 14: 40–47. <a href="https://doi.org/10.1016/j.srhc.2017.09.002">https://doi.org/10.1016/j.srhc.2017.09.002</a>.
+</div>
+<div id="ref-hilbe2011negbin" class="csl-entry" role="listitem">
+Hilbe, Joseph M. 2011. <em>Negative Binomial Regression</em>. 2nd ed. Cambridge University Press.
 </div>
 <div id="ref-hossain2023doubleburden" class="csl-entry" role="listitem">
 Hossain, Md Ismail, Azizur Rahman, M. Sheikh Giash Uddin, and Faozia Afia Zinia. 2023. <span>“Double Burden of Malnutrition Among Women of Reproductive Age in Bangladesh: A Comparative Study of Classical and Bayesian Logistic Regression Approach.”</span> <em>Food Science &amp; Nutrition</em> 11 (4): 1785–96. <a href="https://doi.org/10.1002/fsn3.3209">https://doi.org/10.1002/fsn3.3209</a>.
@@ -333,6 +2026,18 @@ Khan, Md. Nuruzzaman, Md. Mofizul Islam, Abusaleh Shariff, Md. Moudud Alam, and 
 </div>
 <div id="ref-khan2020urban" class="csl-entry" role="listitem">
 Khan, Md. Nuruzzaman, Pushpendra Kumar, Md. Mijanur Rahman, Md. Nazrul Islam Mondal, and M. Mofizul Islam. 2020. <span>“Inequalities in Utilization of Maternal Reproductive Health Care Services in Urban Bangladesh: A Population-Based Study.”</span> <em>SAGE Open</em> 10 (2). <a href="https://doi.org/10.1177/2158244020914394">https://doi.org/10.1177/2158244020914394</a>.
+</div>
+<div id="ref-liu2016proportional" class="csl-entry" role="listitem">
+Liu, Xing. 2016. <span>“Fitting Proportional Odds Models for Complex Sample Survey Data with SAS, IBM SPSS, Stata, and r.”</span> <em>General Linear Model Journal</em> 42 (2): 1–13. <a href="https://ojs.lib.ua.edu/glmj/article/view/300">https://ojs.lib.ua.edu/glmj/article/view/300</a>.
+</div>
+<div id="ref-lumley2004survey" class="csl-entry" role="listitem">
+Lumley, Thomas. 2004. <span>“Analysis of Complex Survey Samples.”</span> <em>Journal of Statistical Software</em> 9 (8): 1–19. <a href="https://doi.org/10.18637/jss.v009.i08">https://doi.org/10.18637/jss.v009.i08</a>.
+</div>
+<div id="ref-lumley2010complex" class="csl-entry" role="listitem">
+Lumley, Thomas. 2010. <em>Complex Surveys: A Guide to Analysis Using r</em>. Wiley.
+</div>
+<div id="ref-mccullagh1980regression" class="csl-entry" role="listitem">
+McCullagh, Peter. 1980. <span>“Regression Models for Ordinal Data.”</span> <em>Journal of the Royal Statistical Society: Series B</em> 42 (2): 109–42.
 </div>
 <div id="ref-mendenhall2017ncd" class="csl-entry" role="listitem">
 Mendenhall, Emily, Brandon A. Kohrt, Shane A. Norris, David Ndetei, and Dorairaj Prabhakaran. 2017. <span>“Non-Communicable Disease Syndemics: Poverty, Depression, and Diabetes Among Low-Income Populations.”</span> <em>The Lancet</em> 389 (10072): 951–63. <a href="https://doi.org/10.1016/S0140-6736(17)30402-6">https://doi.org/10.1016/S0140-6736(17)30402-6</a>.
