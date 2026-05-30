@@ -1,0 +1,9 @@
+analysis,category,weighted_n,weighted_percent
+Observed risk-domain pattern,No nutrition + Reproductive + Access,1393.56762,35.77343333322536
+Observed risk-domain pattern,No nutrition + No reproductive + Access,832.742755,21.376836690363774
+Observed risk-domain pattern,Nutrition + Reproductive + Access,443.680204,11.389446748960648
+Observed risk-domain pattern,No nutrition + No reproductive + No access,434.1664,11.145223628205752
+Observed risk-domain pattern,No nutrition + Reproductive + No access,429.355469,11.02172512197665
+Observed risk-domain pattern,Nutrition + No reproductive + Access,213.253342,5.474297840763915
+Observed risk-domain pattern,Nutrition + Reproductive + No access,90.234764,2.3163621685565023
+Observed risk-domain pattern,Nutrition + No reproductive + No access,58.537252,1.5026744679473918

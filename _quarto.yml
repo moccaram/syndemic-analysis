@@ -1,0 +1,28 @@
+project:
+  type: website
+  output-dir: docs
+
+metadata-files:
+  - _website.yml
+
+execute:
+  freeze: auto
+
+bibliography: references.bib
+link-citations: true
+
+crossref:
+  lof-title: "List of Figures"
+  lot-title: "List of Tables"
+
+format:
+  html:
+    theme:
+      - cosmo
+      - custom.scss
+    toc: true
+    toc-depth: 3
+    number-sections: false
+    smooth-scroll: true
+    code-fold: true
+    df-print: kable

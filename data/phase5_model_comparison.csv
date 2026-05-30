@@ -1,0 +1,3 @@
+"Model","Outcome","N_predictors","N_observations","Deviance","N_significant"
+"Ordinal Logistic (Base)","Syndemic Tertiles",10,11657,19083.5378141466,10
+"Ordinal Logistic (Full)","Syndemic Tertiles",23,11657,11067.4893059501,13

@@ -1,0 +1,5 @@
+"age_group","education","wealth","residence","division","employment","husband_education","Low","Medium","High"
+"25–34","No education","Middle","Rural","Dhaka","Not working","Secondary",0.053549422713687,0.722216978446628,0.224233598839685
+"25–34","Primary","Middle","Rural","Dhaka","Not working","Secondary",0.0604217060260725,0.736828208158794,0.202750085815133
+"25–34","Secondary","Middle","Rural","Dhaka","Not working","Secondary",0.0970481877138022,0.770885971838349,0.132065840447849
+"25–34","Higher","Middle","Rural","Dhaka","Not working","Secondary",0.203768019703411,0.736166134521838,0.0600658457747514

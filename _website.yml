@@ -1,0 +1,18 @@
+website:
+  title: "Syndemic Burden Among Bangladeshi Women"
+  favicon: ""
+  site-url: https://moccaram.github.io/syndemic-analysis/
+  repo-url: https://github.com/moccaram/syndemic-analysis
+  repo-actions: [edit, issue]
+  reader-mode: true
+  sidebar:
+    style: docked
+    pinned: true
+    foreground: "primary"
+    background: "#ebecf7"
+  page-footer:
+    left: |
+      &copy; 2026 Mukarram Hosain.
+    right: |
+      Built with ❤︎ and [Quarto](https://quarto.org/)
+    background: "#29306c"

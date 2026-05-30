@@ -1,0 +1,3 @@
+test,statistic,p_value,p_formatted
+Ordinal model: wealth x residence,0.17264389508941766,0.952398857993725,0.952
+Ordinal model: education x residence,0.591735980465533,0.6205819498286174,0.621
