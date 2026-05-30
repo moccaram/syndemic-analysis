@@ -18,7 +18,6 @@ library(tidyr)
 theme_set(theme_minimal(base_size = 13))
 
 pct1 <- function(x) sprintf("%.1f%%", x)
-pval <- function(x) if_else(is.na(x), "", if_else(x < 0.001, "<0.001", sprintf("%.3f", x)))
 
 format_effect <- function(effect, ci_low, ci_high) {
   sprintf("%.2f (%.2f–%.2f)", effect, ci_low, ci_high)
@@ -233,23 +232,22 @@ For descriptive purposes, the syndemic score was collapsed into three ordinal ca
 ```{r}
 #| label: table-burden-categories
 #| message: false
-# Use S8 as the source for precise category counts and labels
-burden_data <- read_csv("data/S8_ordinal_sensitivity_category_counts.csv", show_col_types = FALSE)
+burden_data <- read_csv("data/paper_burden_categories.csv", show_col_types = FALSE)
 
 burden_data |>
   transmute(
     `Burden Level` = case_when(
-      str_detect(syndemic_sensitivity_ord, "Low") ~ "Low Burden",
-      str_detect(syndemic_sensitivity_ord, "Medium") ~ "Medium Burden",
-      str_detect(syndemic_sensitivity_ord, "High") ~ "High Burden"
+      str_detect(burden_category, "Low")    ~ "Low Burden",
+      str_detect(burden_category, "Medium") ~ "Medium Burden",
+      str_detect(burden_category, "High")   ~ "High Burden"
     ),
     `Score Range` = case_when(
-      `Burden Level` == "Low Burden" ~ "0–1",
-      `Burden Level` == "Medium Burden" ~ "2–3",
-      `Burden Level` == "High Burden" ~ "≥4"
+      str_detect(burden_category, "Low")    ~ "0",
+      str_detect(burden_category, "Medium") ~ "1–3",
+      str_detect(burden_category, "High")   ~ "≥4"
     ),
     `Unweighted n` = format(unweighted_n, big.mark = ","),
-    `Weighted Percentage (%)` = sprintf("%.1f%%", percent)
+    `Weighted Percentage (%)` = sprintf("%.1f%%", weighted_percent)
   ) |>
   kable(
     caption = "Classification of women by syndemic burden category (n = 11,657)",
@@ -412,9 +410,16 @@ knitr::include_graphics("figures/figure3_correlation_heatmap.jpg")
 domain_oe <- read_csv("data/paper_domain_observed_expected.csv", show_col_types = FALSE)
 
 domain_oe |>
+  transmute(
+    `Domain combination`     = clustering_test,
+    `Observed %`             = sprintf("%.1f", observed_pct),
+    `Expected % (independence)` = sprintf("%.1f", expected_pct_under_independence),
+    `O/E ratio`              = sprintf("%.2f", observed_expected_ratio),
+    `95% CI (observed)`      = sprintf("%.1f–%.1f", ci_lower_pct, ci_upper_pct)
+  ) |>
   kable(
     caption = "Observed versus expected co-occurrence of risk domains under independence",
-    align = "lrrr"
+    align = "lrrrr"
   )
 ```
 
@@ -435,70 +440,80 @@ diag |>
   kable(caption = "S3. Quasi-Poisson model diagnostics", align = "lll")
 ```
 
-### S4. Ordinal Sensitivity Analysis — Burden Category Counts
+### S4. Ordinal Sensitivity Analysis — Full Results
 
-```{r}
-#| label: s3-ordinal-counts
-s8 <- read_csv("data/S8_ordinal_sensitivity_category_counts.csv", show_col_types = FALSE)
-
-s8 |>
-  kable(caption = "S4. Syndemic burden category counts for ordinal sensitivity analysis", align = "lrr")
-```
-
-### S5. Ordinal Sensitivity Analysis — Full Results
-
-The ordinal proportional-odds model uses the same predictors as the primary quasi-Poisson model. Results are odds ratios (OR) for being in a higher burden category. The ordinal model is supplementary; its primary role here is to confirm the direction and significance of predictors found in the quasi-Poisson model.
+The ordinal proportional-odds model uses the same predictors and the same burden categories (Low 0 / Medium 1–3 / High ≥4) as the primary analysis. Results are odds ratios (OR) for being in a higher burden category, with **no education**, **poorest wealth quintile**, **urban residence**, and **Barishal division** as reference categories. The ordinal model is supplementary; its role is to confirm the direction and significance of predictors found in the primary quasi-Poisson model.
 
 ```{r}
 #| label: s4-ordinal-results
-s9 <- read_csv("data/S9_ordinal_sensitivity_results.csv", show_col_types = FALSE)
+ordinal_sens <- read_csv("data/paper_ordinal_sensitivity_results.csv", show_col_types = FALSE)
 
-s9 |>
+ordinal_sens |>
   mutate(
-    variable_group = case_when(
+    Group = case_when(
+      str_starts(term, "husband_education") ~ "Husband's education",
       str_starts(term, "age_group")         ~ "Age group",
       str_starts(term, "education")         ~ "Respondent education",
       str_starts(term, "wealth")            ~ "Wealth quintile",
       str_starts(term, "residence")         ~ "Residence",
       str_starts(term, "division")          ~ "Division",
       str_starts(term, "employment")        ~ "Employment",
-      str_starts(term, "husband_education") ~ "Husband's education",
+      TRUE                                  ~ term
+    ),
+    Category = case_when(
+      str_starts(term, "husband_education") ~ str_remove(term, "husband_education"),
+      str_starts(term, "age_group")         ~ str_remove(term, "age_group"),
+      str_starts(term, "education")         ~ str_remove(term, "education"),
+      str_starts(term, "wealth")            ~ str_remove(term, "wealth"),
+      str_starts(term, "residence")         ~ str_remove(term, "residence"),
+      str_starts(term, "division")          ~ str_remove(term, "division"),
+      str_starts(term, "employment")        ~ str_remove(term, "employment"),
       TRUE                                  ~ term
     )
   ) |>
   transmute(
-    Group       = variable_group,
-    Term        = term,
+    Group,
+    Category,
     `OR (95% CI)` = OR_CI,
-    `p-value`   = p_formatted,
-    Note        = sensitivity_role
+    `p-value`     = p_formatted
   ) |>
-  kable(caption = "S5. Ordinal logistic sensitivity analysis: odds ratios for elevated syndemic burden", align = "lllll")
+  kable(caption = "S4. Ordinal logistic sensitivity analysis: odds ratios for elevated syndemic burden", align = "llll")
 ```
 
-### S6. Missingness Summary
+### S5. Missingness Summary
 
 ```{r}
 #| label: s5-missingness
 missingness <- read_csv("data/paper_missingness_summary.csv", show_col_types = FALSE)
 
 missingness |>
-  mutate(missing_percent = pct1(missing_percent)) |>
-  kable(caption = "S6. Missingness summary for risk indicators and model covariates", align = "lrrr")
+  transmute(
+    Variable        = variable,
+    `Total N`       = format(n_total, big.mark = ","),
+    `Missing`       = format(n_missing, big.mark = ","),
+    `Non-missing`   = format(n_nonmissing, big.mark = ","),
+    `Missing %`     = pct1(missing_percent)
+  ) |>
+  kable(caption = "S5. Missingness summary for risk indicators and model covariates", align = "lrrrr")
 ```
 
-### S7. Available-Indicator vs Complete-Case Score Sensitivity
+### S6. Available-Indicator vs Complete-Case Score Sensitivity
 
 ```{r}
 #| label: s6-complete-case
 complete_case <- read_csv("data/paper_complete_case_sensitivity.csv", show_col_types = FALSE)
 
 complete_case |>
-  mutate(weighted_percent = pct1(weighted_percent)) |>
-  kable(caption = "S7. Available-indicator vs complete 9-indicator burden distribution", align = "llrl")
+  transmute(
+    Analysis             = analysis,
+    `Burden category`    = category,
+    `Weighted n`         = format(round(weighted_n), big.mark = ","),
+    `Weighted %`         = pct1(weighted_percent)
+  ) |>
+  kable(caption = "S6. Available-indicator vs complete 9-indicator burden distribution", align = "llrr")
 ```
 
-### S8. Very High Burden by Division (score ≥6)
+### S7. Very High Burden by Division (score ≥6)
 
 ```{r}
 #| label: s7-very-high
@@ -509,11 +524,7 @@ very_high_division |>
     Division = division,
     `Very high burden, score ≥6` = prev_ci
   ) |>
-  kable(caption = "S8. Very high syndemic burden (score ≥6) by division", align = "ll")
+  kable(caption = "S7. Very high syndemic burden (score ≥6) by division", align = "ll")
 ```
-
-### Additional Figures
-
-![Wealth-residence intersectionality.](figures/figure5_intersectionality_wealth_residence.jpg){fig-alt="Intersectional differences in syndemic burden by wealth quintile and urban-rural residence."}
 
 ## References

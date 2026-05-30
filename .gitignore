@@ -7,3 +7,16 @@
 
 /.quarto/
 **/*.quarto_ipynb
+
+# Unused / intermediate derivation artifacts (kept locally, not shipped in the repo)
+data/phase4_*.csv
+data/phase5_*.csv
+data/table2_risk_factor_prevalence.csv
+data/table3_bivariate_associations.csv
+data/paper_count_model_results.csv
+data/paper_division_high_ge4.csv
+data/paper_domain_patterns.csv
+data/paper_domain_summary.csv
+data/paper_risk_correlation_matrix.csv
+data/paper_sample_flow.csv
+data/paper_education_residence_mean_score.csv

@@ -326,4 +326,39 @@ count_model <- svyglm(
 )
 write_csv(extract_model(count_model), "data/paper_count_model_results.csv")
 
+# Canonical descriptive burden categories (Low 0 / Medium 1-3 / High >=4).
+# This is the single source of truth for the Results "Burden Categories" table,
+# replacing the stale S8 file that used an abandoned 0-1 / 2-3 binning.
+burden_weighted <- weighted_distribution(design_all, "syndemic_tertile", "Available-indicator score") %>%
+  select(category, weighted_percent)
+
+burden_categories <- analysis_data %>%
+  filter(!is.na(syndemic_tertile)) %>%
+  count(syndemic_tertile, name = "unweighted_n") %>%
+  mutate(category = as.character(syndemic_tertile)) %>%
+  left_join(burden_weighted, by = "category") %>%
+  transmute(
+    burden_category = factor(category, levels = c("Low (0)", "Medium (1-3)", "High (>=4)")),
+    unweighted_n,
+    weighted_percent
+  ) %>%
+  arrange(burden_category)
+write_csv(burden_categories, "data/paper_burden_categories.csv")
+
+# Ordinal proportional-odds sensitivity model on the SAME tertile as the
+# descriptive analysis (Low 0 / Medium 1-3 / High >=4). Replaces the stale S9
+# file, whose threshold rows reveal it was fit on the abandoned 0-1 / 2-3 bins.
+ordinal_or <- extract_model(ordinal_base) %>%
+  transmute(
+    term,
+    OR = effect,
+    CI_lower = ci_lower,
+    CI_upper = ci_upper,
+    OR_CI = effect_ci,
+    p_value,
+    p_formatted,
+    sensitivity_role = "Supplementary only; primary model is survey quasi-Poisson."
+  )
+write_csv(ordinal_or, "data/paper_ordinal_sensitivity_results.csv")
+
 cat("Aggregate manuscript outputs written to data/.\n")
